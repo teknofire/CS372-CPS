@@ -13,8 +13,27 @@
 
 TEST_CASE( "Shapes", "[shape]")
 {
-  SECTION( "default constructor" )
-  {
-    
-  }
+//  SECTION( "circle" )
+//  {
+//    Circle circle(10);
+//  }
+//  SECTION( "Polygon" )
+//  {
+//    Polygon polygon5(5, 72);
+//    Polygon polygon6(6, 72);
+//  }
+//  
+//  SECTION( "Square" )
+//  {
+//    Square square(72);
+//  }
+//  
+//  Section( "Rectangle" )
+//  {
+//    Rectangle rectangle(72, 144);
+//  }
+//  Section( "Spacer" )
+//  {
+//    Spacer spacer(72);
+//  }
 }
