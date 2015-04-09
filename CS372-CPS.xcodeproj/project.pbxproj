@@ -12,6 +12,12 @@
 		4FDAA2AC1AD72EFB0016FD24 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FDAA2AA1AD72EFB0016FD24 /* Circle.cpp */; };
 		A38D1A421AD3365200EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A411AD3365200EA73C5 /* main.cpp */; };
 		A38D1A4F1AD3376D00EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A4E1AD3376D00EA73C5 /* main.cpp */; };
+		A38D1A5D1AD72A9500EA73C5 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A571AD72A9500EA73C5 /* Circle.cpp */; };
+		A38D1A5E1AD72A9500EA73C5 /* Polygons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A591AD72A9500EA73C5 /* Polygons.cpp */; };
+		A38D1A5F1AD72A9500EA73C5 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A5B1AD72A9500EA73C5 /* Shape.cpp */; };
+		A38D1A601AD72A9B00EA73C5 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A571AD72A9500EA73C5 /* Circle.cpp */; };
+		A38D1A611AD72AA400EA73C5 /* Polygons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A591AD72A9500EA73C5 /* Polygons.cpp */; };
+		A38D1A621AD72AA700EA73C5 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A5B1AD72A9500EA73C5 /* Shape.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +53,12 @@
 		A38D1A4C1AD3376D00EA73C5 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38D1A4E1AD3376D00EA73C5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A38D1A531AD3381900EA73C5 /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
+		A38D1A571AD72A9500EA73C5 /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Circle.cpp; path = test/Circle.cpp; sourceTree = SOURCE_ROOT; };
+		A38D1A581AD72A9500EA73C5 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Circle.h; path = test/Circle.h; sourceTree = SOURCE_ROOT; };
+		A38D1A591AD72A9500EA73C5 /* Polygons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Polygons.cpp; path = test/Polygons.cpp; sourceTree = SOURCE_ROOT; };
+		A38D1A5A1AD72A9500EA73C5 /* Polygons.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; name = Polygons.h; path = test/Polygons.h; sourceTree = SOURCE_ROOT; tabWidth = 4; };
+		A38D1A5B1AD72A9500EA73C5 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shape.cpp; path = test/Shape.cpp; sourceTree = SOURCE_ROOT; };
+		A38D1A5C1AD72A9500EA73C5 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shape.h; path = test/Shape.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,12 @@
 		A38D1A401AD3365200EA73C5 /* CS372-CPS */ = {
 			isa = PBXGroup;
 			children = (
+				A38D1A571AD72A9500EA73C5 /* Circle.cpp */,
+				A38D1A581AD72A9500EA73C5 /* Circle.h */,
+				A38D1A591AD72A9500EA73C5 /* Polygons.cpp */,
+				A38D1A5A1AD72A9500EA73C5 /* Polygons.h */,
+				A38D1A5B1AD72A9500EA73C5 /* Shape.cpp */,
+				A38D1A5C1AD72A9500EA73C5 /* Shape.h */,
 				A38D1A411AD3365200EA73C5 /* main.cpp */,
 			);
 			path = "CS372-CPS";
@@ -185,7 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A38D1A5E1AD72A9500EA73C5 /* Polygons.cpp in Sources */,
 				A38D1A421AD3365200EA73C5 /* main.cpp in Sources */,
+				A38D1A5D1AD72A9500EA73C5 /* Circle.cpp in Sources */,
+				A38D1A5F1AD72A9500EA73C5 /* Shape.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

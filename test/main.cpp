@@ -18,6 +18,13 @@
 using std::shared_ptr;
 using std::make_shared;
 
+#include <limits>
+
+//Compare
+bool AreSame(double a, double b) {
+    return std::fabs(a - b) <= 0.0005;
+}
+
 //Test Strategy Using Catch
 //Test the results from each method to determine if the shape will be built rights
 //Test the output stream for proper format
