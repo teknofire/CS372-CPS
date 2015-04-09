@@ -11,6 +11,7 @@
 #include "catch.hpp"
 #include "Shape.h"
 #include "Circle.h"
+#include "Polygons.h"
 
 #include <iostream>
 #include <memory>
@@ -23,18 +24,23 @@ TEST_CASE( "Shapes", "[shape]")
 
   SECTION( "circle" )
   {
-    shared_ptr<Shape> circle = make_shared<Circle>(10);
+    double radius = 10;
+    shared_ptr<Shape> circle = make_shared<Circle>(radius);
     REQUIRE(circle->getBoundingBoxHeight() == 20);
     REQUIRE(circle->getBoundingBoxWidth() == 20);
     REQUIRE(circle->getCurrentPositionX() == 10);
     REQUIRE(circle->getCurrentPositionY() == 10);
-
   }
-//  SECTION( "Polygon" )
-//  {
-//    Polygon polygon5(5, 72);
-//    Polygon polygon6(6, 72);
-//  }
+  SECTION( "Polygon" )
+  {
+    double numberOfSides = 4;
+    double sideLength = 1;
+    shared_ptr<Shape> squareLike = make_shared<Polygons>(numberOfSides, sideLength);
+    REQUIRE(squareLike->getBoundingBoxHeight() == 1);
+    REQUIRE(squareLike->getBoundingBoxWidth() == 1);
+    REQUIRE(squareLike->getCurrentPositionX() == 1);
+    REQUIRE(squareLike->getCurrentPositionY() == 1);
+  }
 //
 //  SECTION( "Square" )
 //  {
