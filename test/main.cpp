@@ -18,6 +18,13 @@
 using std::shared_ptr;
 using std::make_shared;
 
+#include <limits>
+
+//Compare
+bool AreSame(double a, double b) {
+    return std::fabs(a - b) <= 0.0005;
+}
+
 //Test Strategy Using Catch
 //Test the results from each method to determine if the shape will be built rights
 //Test the output stream for proper format
@@ -25,25 +32,37 @@ using std::make_shared;
 TEST_CASE( "Shapes", "[shape]")
 {
 
-  SECTION( "Circle" )
-  {
-    double radius = 10;
-    shared_ptr<Shape> circle = make_shared<Circle>(radius);
-    REQUIRE(circle->getBoundingBoxHeight() == 20);
-    REQUIRE(circle->getBoundingBoxWidth() == 20);
-    REQUIRE(circle->getCurrentPositionX() == 10);
-    REQUIRE(circle->getCurrentPositionY() == 10);
-  }
-  SECTION( "Polygon" )
-  {
-    double numberOfSides = 4;
-    double sideLength = 1;
-    shared_ptr<Shape> squareLike = make_shared<Polygons>(numberOfSides, sideLength);
-    //REQUIRE(squareLike->getBoundingBoxHeight() == 1.0);
-    //REQUIRE(squareLike->getBoundingBoxWidth() == 1.0);
-    //REQUIRE(squareLike->getCurrentPositionX() == .5);
-    //REQUIRE(squareLike->getCurrentPositionY() == .5);
-  }
+    SECTION( "Circle" )
+    {
+        double radius = 10;
+        shared_ptr<Shape> circle = make_shared<Circle>(radius);
+        REQUIRE(circle->getBoundingBoxHeight() == 20);
+        REQUIRE(circle->getBoundingBoxWidth() == 20);
+        REQUIRE(circle->getCurrentPositionX() == 10);
+        REQUIRE(circle->getCurrentPositionY() == 10);
+    }
+    SECTION( "4 sided polygon" )
+    {
+        double numberOfSides = 4;
+        double sideLength = 1;
+        shared_ptr<Shape> squareLike = make_shared<Polygons>(numberOfSides, sideLength);
+    
+        REQUIRE(AreSame(squareLike->getBoundingBoxHeight(), 1.0));
+        REQUIRE(AreSame(squareLike->getBoundingBoxWidth(), 1.0));
+        REQUIRE(AreSame(squareLike->getCurrentPositionX(), 0.5));
+        REQUIRE(AreSame(squareLike->getCurrentPositionY(), 0.5));
+    }
+    SECTION( "5 sided polygon" )
+    {
+        double numberOfSides = 5;
+        double sideLength = 1;
+        shared_ptr<Shape> pentagon = make_shared<Polygons>(numberOfSides, sideLength);
+        
+        REQUIRE(AreSame(pentagon->getBoundingBoxHeight(), 1.53884));
+        REQUIRE(AreSame(pentagon->getBoundingBoxWidth(), 1.61803));
+        REQUIRE(AreSame(pentagon->getCurrentPositionX(), 1.61803/2.0));
+        REQUIRE(AreSame(pentagon->getCurrentPositionY(), 1.53884/2.0));
+    }
 //
 //  SECTION( "Square" )
 //  {

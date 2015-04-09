@@ -6,7 +6,6 @@ Polygons::Polygons(double numberOfSides, double sideLength):_numberOfSides(numbe
 {}
 double Polygons::getBoundingBoxHeight()
 {
-
     if(int(_numberOfSides)%2 != 0)
         return _sideLength*(1+cos(PI/_numberOfSides))/(2*sin(PI/_numberOfSides));
     else if(int(_numberOfSides)%4 == 0)
