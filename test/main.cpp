@@ -55,7 +55,7 @@ TEST_CASE( "Shapes", "[shape]")
       numberOfSides = 5, sideLength = 1;
       
       shared_ptr<Shape> pentagon = make_shared<Polygons>(numberOfSides, sideLength);
-      REQUIRE(pentagon-> getBoundingBoxHeight() == )
+      //REQUIRE(pentagon-> getBoundingBoxHeight() == )
   }
 //
 //  SECTION( "Square" )
