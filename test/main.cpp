@@ -18,11 +18,14 @@
 using std::shared_ptr;
 using std::make_shared;
 
-
+//Test Strategy Using Catch
+//Test the results from each method to determine if the shape will be built rights
+//Test the output stream for proper format
+//Visual Inspection of resulting file.ps
 TEST_CASE( "Shapes", "[shape]")
 {
 
-  SECTION( "circle" )
+  SECTION( "Circle" )
   {
     double radius = 10;
     shared_ptr<Shape> circle = make_shared<Circle>(radius);
