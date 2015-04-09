@@ -15,7 +15,7 @@ class Polygons : public Shape
     protected:
     private:
         double _numberOfSides;
-       // double _sideLength;
+        double _sideLength;
 };
 
 #endif // POLYGONS_H
