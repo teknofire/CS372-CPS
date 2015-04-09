@@ -38,11 +38,24 @@ TEST_CASE( "Shapes", "[shape]")
   {
     double numberOfSides = 4;
     double sideLength = 1;
-    shared_ptr<Shape> squareLike = make_shared<Polygons>(numberOfSides, sideLength);
-    //REQUIRE(squareLike->getBoundingBoxHeight() == 1.0);
-    //REQUIRE(squareLike->getBoundingBoxWidth() == 1.0);
-    //REQUIRE(squareLike->getCurrentPositionX() == .5);
-    //REQUIRE(squareLike->getCurrentPositionY() == .5);
+    shared_ptr<Shape> square = make_shared<Polygons>(numberOfSides, sideLength);
+    REQUIRE(square->getBoundingBoxHeight() == 1.0);
+    REQUIRE(square->getBoundingBoxWidth() == 1.0);
+    REQUIRE(square->getCurrentPositionX() == .5);
+    REQUIRE(square->getCurrentPositionY() == .5);
+          
+    numberOfSides = 3, sideLength = 1;
+      
+      shared_ptr<Shape> triangle = make_shared<Polygons>(numberOfSides, sideLength);
+      REQUIRE(triangle->getBoundingBoxHeight() == 1.0);
+      REQUIRE(triangle->getBoundingBoxWidth() == 1.0);
+      REQUIRE(triangle->getCurrentPositionX() == .5);
+      REQUIRE(triangle->getCurrentPositionY() == .5);
+      
+      numberOfSides = 5, sideLength = 1;
+      
+      shared_ptr<Shape> pentagon = make_shared<Polygons>(numberOfSides, sideLength);
+      REQUIRE(pentagon-> getBoundingBoxHeight() == )
   }
 //
 //  SECTION( "Square" )
