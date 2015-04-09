@@ -2,7 +2,8 @@
 #define CIRCLE_H
 
 #include "Shape.h"
-
+#include <sstream>
+using std::iostream;
 
 class Circle : public Shape
 {
@@ -12,6 +13,9 @@ class Circle : public Shape
         virtual double getBoundingBoxWidth() override;
         virtual double getCurrentPositionX() override;
         virtual double getCurrentPositionY() override;
+        virtual void buildPS(std::stringstream & os) override;
+        virtual void createPS(const std::iostream & os) override;
+    
     protected:
     private:
         double _radius;

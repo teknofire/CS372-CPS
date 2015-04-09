@@ -18,3 +18,12 @@ double Circle::getCurrentPositionY()
 {
     return _radius;
 }
+
+void Circle::buildPS(std::stringstream & os) {
+    os << "";
+}
+
+void Circle::createPS(const std::iostream & os) {
+    
+    
+}
