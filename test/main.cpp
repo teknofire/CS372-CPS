@@ -64,7 +64,7 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(triangle->getBoundingBoxWidth() == 1.0);
         REQUIRE(triangle->getCurrentPositionX() == .5);
         REQUIRE(AreSame(triangle->getCurrentPositionY(), .866025 / 2));
-        
+        //t the
         
         
     }
