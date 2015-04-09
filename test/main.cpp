@@ -24,8 +24,8 @@ TEST_CASE( "Shapes", "[shape]")
   SECTION( "circle" )
   {
     shared_ptr<Shape> circle = make_shared<Circle>(10);
-    REQUIRE(circle->getBoundingBoxHeight() == 10);
-    REQUIRE(circle->getBoundingBoxWidth() == 10);
+    REQUIRE(circle->getBoundingBoxHeight() == 20);
+    REQUIRE(circle->getBoundingBoxWidth() == 20);
     REQUIRE(circle->getCurrentPositionX() == 10);
     REQUIRE(circle->getCurrentPositionY() == 10);
 

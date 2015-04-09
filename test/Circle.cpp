@@ -4,11 +4,11 @@ Circle::Circle(double radius):_radius(radius)
 {}
 double Circle::getBoundingBoxHeight()
 {
-    return _radius;
+    return (2*_radius);
 }
 double Circle::getBoundingBoxWidth()
 {
-    return _radius;
+    return (2*_radius);
 }
 double Circle::getCurrentPositionX()
 {
