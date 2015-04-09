@@ -29,7 +29,7 @@ double Polygons::getBoundingBoxWidth()
 
 double Polygons::getCurrentPositionX()
 {
-    return 0;
+    return getBoundingBoxWidth()/2;
 }
 double Polygons::getCurrentPositionY()
 {
