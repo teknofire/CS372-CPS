@@ -33,5 +33,5 @@ double Polygons::getCurrentPositionX()
 }
 double Polygons::getCurrentPositionY()
 {
-    return 0;
+    return getBoundingBoxHeight()/2;
 }
