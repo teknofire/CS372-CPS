@@ -45,12 +45,20 @@ TEST_CASE( "Shapes", "[shape]")
     {
         double numberOfSides = 4;
         double sideLength = 1;
-        shared_ptr<Shape> squareLike = make_shared<Polygons>(numberOfSides, sideLength);
+        shared_ptr<Shape> square = make_shared<Polygons>(numberOfSides, sideLength);
     
-        REQUIRE(AreSame(squareLike->getBoundingBoxHeight(), 1.0));
-        REQUIRE(AreSame(squareLike->getBoundingBoxWidth(), 1.0));
-        REQUIRE(AreSame(squareLike->getCurrentPositionX(), 0.5));
-        REQUIRE(AreSame(squareLike->getCurrentPositionY(), 0.5));
+        REQUIRE(AreSame(square->getBoundingBoxHeight(), 1.0));
+        REQUIRE(AreSame(square->getBoundingBoxWidth(), 1.0));
+        REQUIRE(AreSame(square->getCurrentPositionX(), 0.5));
+        REQUIRE(AreSame(square->getCurrentPositionY(), 0.5));
+        
+        shared_ptr<Shape> doubleSquare = make_shared<Polygons>(numberOfSides, sideLength * 2);
+        
+        REQUIRE(AreSame(doubleSquare->getBoundingBoxHeight(), 2.0));
+        REQUIRE(AreSame(doubleSquare->getBoundingBoxWidth(), 2.0));
+        REQUIRE(AreSame(doubleSquare->getCurrentPositionX(), 1.0));
+        REQUIRE(AreSame(doubleSquare->getCurrentPositionY(), 1.0));
+        
     }
     
     SECTION( "Triangle" )
@@ -64,12 +72,10 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(triangle->getBoundingBoxWidth() == 1.0);
         REQUIRE(triangle->getCurrentPositionX() == .5);
         REQUIRE(AreSame(triangle->getCurrentPositionY(), .866025 / 2));
-        //t the
-        
         
     }
     
-    SECTION( "5 sided polygon" )
+    SECTION( "5 Sided Polygon" )
     {
         double numberOfSides = 5;
         double sideLength = 1;
@@ -79,6 +85,21 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(AreSame(pentagon->getBoundingBoxWidth(), 1.61803));
         REQUIRE(AreSame(pentagon->getCurrentPositionX(), 1.61803/2.0));
         REQUIRE(AreSame(pentagon->getCurrentPositionY(), 1.53884/2.0));
+    }
+    
+    SECTION( "6 Sided Polygon")
+    {
+        
+        double numberOfSides = 6;
+        double sideLength = 1;
+        
+        shared_ptr<Shape> hexagon = make_shared<Polygons>(numberOfSides, sideLength);
+        
+        REQUIRE(AreSame(hexagon->getBoundingBoxHeight(), 1.73205));
+        REQUIRE(AreSame(hexagon->getBoundingBoxWidth(), 2.0));
+        REQUIRE(AreSame(hexagon->getCurrentPositionX(), 1.0));
+        REQUIRE(AreSame(hexagon->getCurrentPositionY(), 1.73205/2.0));
+        
     }
 //
 //  SECTION( "Square" )
