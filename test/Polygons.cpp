@@ -48,9 +48,9 @@ double Polygons::getCurrentPositionY()
 const string Polygons::buildPS() {
     std::stringstream buff;
     double angle = 360.0 / _numberOfSides;
+    double offset = _sideLength / 2.0;
     
-    buff << -getCurrentPositionX() << " " << -getCurrentPositionY() << " moveto\n";
-//    buff << "0 0 moveto\n";
+    buff << -offset << " " << -getCurrentPositionY() << " moveto\n";
     buff << _sideLength << " 0 rlineto\n";
     
     for(int ii=0; ii < (_numberOfSides-2); ++ii)
