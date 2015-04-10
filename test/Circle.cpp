@@ -22,18 +22,10 @@ double Circle::getCurrentPositionY()
 const string Circle::buildPS()  {
     
     std::stringstream ps;
-    ps << "newpath\n ";
-    ps << getCurrentPositionX() << " " << getCurrentPositionY() << " ";
-    ps << _radius << " 0 360 arc\n stroke\n";
-    
+
+    ps << "0 0 " << _radius << " 0 360 arc\nstroke\n";
     
     return ps.str();
-    
-}
-
-void Circle::createPS(std::iostream & os) {
-    
-    os << buildPS() << "showpage";
     
 }
 

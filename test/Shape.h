@@ -4,8 +4,9 @@
 #include <sstream>
 #include <string>
 using std::string;
+#include "Postscript.h"
 
-class Shape
+class Shape : public Postscript
 {
     public:
         virtual ~Shape() = default;
@@ -13,8 +14,6 @@ class Shape
         virtual double getBoundingBoxWidth() = 0;
         virtual double getCurrentPositionX() = 0;
         virtual double getCurrentPositionY() = 0;
-        virtual const string buildPS() = 0;
-        virtual void createPS(std::iostream &) = 0;
     private:
 };
 

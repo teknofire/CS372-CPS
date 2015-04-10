@@ -12,6 +12,8 @@
 #include "Shape.h"
 #include "Circle.h"
 #include "Polygons.h"
+#include "Page.h"
+#include "Path.h"
 
 #include <iostream>
 #include <memory>
@@ -45,15 +47,9 @@ TEST_CASE( "Shapes", "[shape]")
         {
          
             string contentString = "";
-            contentString = "newpath\n 10 10 10 0 360 arc\n stroke\n";
+            contentString = "0 0 10 0 360 arc\nstroke\n";
             
             REQUIRE(circle->buildPS() == contentString);
-            
-            std::stringstream testPage;
-            circle->createPS(testPage);
-            
-            REQUIRE(testPage.str() == contentString + "showpage");
-            
         }
         
     }
@@ -74,6 +70,11 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(AreSame(doubleSquare->getBoundingBoxWidth(), 2.0));
         REQUIRE(AreSame(doubleSquare->getCurrentPositionX(), 1.0));
         REQUIRE(AreSame(doubleSquare->getCurrentPositionY(), 1.0));
+        
+        SECTION( "render square" )
+        {
+            REQUIRE(square->buildPS() == "-0.5 -0.5 moveto\n1 0 rlineto\n90 rotate\n1 0 rlineto\n90 rotate\n1 0 rlineto\nclosepath\nstroke\n");
+        }
         
     }
     
@@ -118,6 +119,45 @@ TEST_CASE( "Shapes", "[shape]")
         
     }
 
+}
+
+TEST_CASE( "Postscript", "[postcript]")
+{
+    SECTION( "Page object" )
+    {
+        Page page;
+        
+        REQUIRE(page.buildPS() == "showpage\n");
+    }
+    SECTION( "Path object" )
+    {
+        Path path;
+        
+        REQUIRE(path.buildPS() == "gsave\nnewpath\ngrestore\n");
+    }
     
+    SECTION( "Path with shape" )
+    {
+        double radius = 10;
+        shared_ptr<Shape> circle = make_shared<Circle>(radius);
+        shared_ptr<Path> path = make_shared<Path>(circle);
+        
+        REQUIRE(path->buildPS() == "gsave\nnewpath\n" + circle->buildPS() + "grestore\n");
+        
+        SECTION( "Page with a path" )
+        {
+            Page page(path);
+            
+            REQUIRE(page.buildPS() == path->buildPS() + "showpage\n");
+        }
+    }
     
+    SECTION( "Page with path" )
+    {
+        shared_ptr<Path> path = make_shared<Path>();
+        
+        Page page(path);
+        
+        REQUIRE(page.buildPS() == "gsave\nnewpath\ngrestore\nshowpage\n");
+    }
 }

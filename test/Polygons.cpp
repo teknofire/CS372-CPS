@@ -46,11 +46,19 @@ double Polygons::getCurrentPositionY()
 }
 
 const string Polygons::buildPS() {
+    std::stringstream buff;
+    double angle = 360.0 / _numberOfSides;
     
-    return "";
+    buff << -getCurrentPositionX() << " " << -getCurrentPositionY() << " moveto\n";
+    buff << _sideLength << " 0 rlineto\n";
     
-}
-void Polygons::createPS(std::iostream & os){
+    for(int ii=0; ii < (_numberOfSides-2); ++ii)
+    {
+        buff << angle << " rotate\n";
+        buff << _sideLength << " 0 rlineto\n";
+    }
+    buff << "closepath\nstroke\n";
     
+    return buff.str();
     
 }
