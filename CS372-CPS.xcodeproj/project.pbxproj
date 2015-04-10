@@ -21,6 +21,8 @@
 		A38D1A6A1AD7781700EA73C5 /* Page.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A631AD7751F00EA73C5 /* Page.cpp */; };
 		A38D1A6D1AD7786800EA73C5 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A6B1AD7786800EA73C5 /* Path.cpp */; };
 		A38D1A6E1AD7786800EA73C5 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A6B1AD7786800EA73C5 /* Path.cpp */; };
+		A38D1A751AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A731AD87AE900EA73C5 /* NullPostscript.cpp */; };
+		A38D1A761AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A731AD87AE900EA73C5 /* NullPostscript.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +70,8 @@
 		A38D1A671AD7758300EA73C5 /* Postscript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Postscript.h; sourceTree = "<group>"; };
 		A38D1A6B1AD7786800EA73C5 /* Path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Path.cpp; sourceTree = "<group>"; };
 		A38D1A6C1AD7786800EA73C5 /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
+		A38D1A731AD87AE900EA73C5 /* NullPostscript.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NullPostscript.cpp; sourceTree = "<group>"; };
+		A38D1A741AD87AE900EA73C5 /* NullPostscript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullPostscript.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 		A38D1A401AD3365200EA73C5 /* CS372-CPS */ = {
 			isa = PBXGroup;
 			children = (
+				A38D1A731AD87AE900EA73C5 /* NullPostscript.cpp */,
+				A38D1A741AD87AE900EA73C5 /* NullPostscript.h */,
 				A38D1A571AD72A9500EA73C5 /* Circle.cpp */,
 				A38D1A631AD7751F00EA73C5 /* Page.cpp */,
 				A38D1A641AD7751F00EA73C5 /* Page.h */,
@@ -219,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38D1A5E1AD72A9500EA73C5 /* Polygons.cpp in Sources */,
+				A38D1A751AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */,
 				A38D1A421AD3365200EA73C5 /* main.cpp in Sources */,
 				A38D1A681AD7758300EA73C5 /* Postscript.cpp in Sources */,
 				A38D1A6D1AD7786800EA73C5 /* Path.cpp in Sources */,
@@ -233,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38D1A6A1AD7781700EA73C5 /* Page.cpp in Sources */,
+				A38D1A761AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */,
 				A38D1A611AD72AA400EA73C5 /* Polygons.cpp in Sources */,
 				A38D1A691AD775D800EA73C5 /* Postscript.cpp in Sources */,
 				A38D1A6E1AD7786800EA73C5 /* Path.cpp in Sources */,

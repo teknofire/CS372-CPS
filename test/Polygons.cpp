@@ -50,6 +50,7 @@ const string Polygons::buildPS() {
     double angle = 360.0 / _numberOfSides;
     
     buff << -getCurrentPositionX() << " " << -getCurrentPositionY() << " moveto\n";
+//    buff << "0 0 moveto\n";
     buff << _sideLength << " 0 rlineto\n";
     
     for(int ii=0; ii < (_numberOfSides-2); ++ii)
