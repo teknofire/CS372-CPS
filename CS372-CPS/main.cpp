@@ -7,13 +7,19 @@
 //
 
 #include <iostream>
-#define PI 3.1415
+#include <fstream>
+#include "Circle.h"
+#include <memory>
 
+using std::shared_ptr;
+using std::make_shared;
 
-int main(int argc, const char * argv[]) {
-  
-    std::cout<< PI / 1 << std::endl;
+int main() {
     
+    double radius = 100;
+    shared_ptr<Shape> circle = make_shared<Circle>(radius);
+    std::fstream fs("/Users/test/Desktop/Circle.ps", std::fstream::out);
     
+    circle->createPS(fs);
     return 0;
 }

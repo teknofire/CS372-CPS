@@ -13,8 +13,8 @@ class Shape
         virtual double getBoundingBoxWidth() = 0;
         virtual double getCurrentPositionX() = 0;
         virtual double getCurrentPositionY() = 0;
-        virtual const string & buildPS() = 0;
-        virtual void createPS(const std::iostream &) = 0;
+        virtual const string buildPS() = 0;
+        virtual void createPS(std::iostream &) = 0;
     private:
 };
 

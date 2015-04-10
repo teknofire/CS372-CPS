@@ -43,11 +43,16 @@ TEST_CASE( "Shapes", "[shape]")
         
         SECTION( "Draw the Circle" )
         {
-            std::stringstream contentStream;
-            
-            contentStream << "";
          
-            //REQUIRE()
+            string contentString = "";
+            contentString = "newpath\n 10 10 10 0 360 arc\n stroke\n";
+            
+            REQUIRE(circle->buildPS() == contentString);
+            
+            std::stringstream testPage;
+            circle->createPS(testPage);
+            
+            REQUIRE(testPage.str() == contentString + "showpage");
             
         }
         

@@ -45,12 +45,12 @@ double Polygons::getCurrentPositionY()
     return getBoundingBoxHeight()/2;
 }
 
-const string & Polygons::buildPS() {
+const string Polygons::buildPS() {
     
     return "";
     
 }
-void Polygons::createPS(const std::iostream & os){
+void Polygons::createPS(std::iostream & os){
     
     
 }
