@@ -12,7 +12,7 @@ class Polygons : public Shape
         virtual double getBoundingBoxWidth() override;
         virtual double getCurrentPositionX() override;
         virtual double getCurrentPositionY() override;
-        virtual void buildPS(std::stringstream &) override;
+        virtual const string & buildPS() override;
         virtual void createPS(const std::iostream & os) override;
     protected:
     private:

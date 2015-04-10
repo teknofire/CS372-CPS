@@ -19,8 +19,8 @@ double Circle::getCurrentPositionY()
     return _radius;
 }
 
-void Circle::buildPS(std::stringstream & os) {
-    os << "";
+const string & Circle::buildPS()  {
+    return "";
 }
 
 void Circle::createPS(const std::iostream & os) {

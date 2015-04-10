@@ -45,9 +45,9 @@ double Polygons::getCurrentPositionY()
     return getBoundingBoxHeight()/2;
 }
 
-void Polygons::buildPS(std::stringstream & os){
+const string & Polygons::buildPS() {
     
-    
+    return "";
     
 }
 void Polygons::createPS(const std::iostream & os){

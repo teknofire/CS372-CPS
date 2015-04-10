@@ -40,6 +40,17 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(circle->getBoundingBoxWidth() == 20);
         REQUIRE(circle->getCurrentPositionX() == 10);
         REQUIRE(circle->getCurrentPositionY() == 10);
+        
+        SECTION( "Draw the Circle" )
+        {
+            std::stringstream contentStream;
+            
+            contentStream << "";
+         
+            //REQUIRE()
+            
+        }
+        
     }
     SECTION( "4 sided polygon" )
     {
@@ -101,18 +112,7 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(AreSame(hexagon->getCurrentPositionY(), 1.73205/2.0));
         
     }
-//
-//  SECTION( "Square" )
-//  {
-//    Square square(72);
-//  }
-//
-//  Section( "Rectangle" )
-//  {
-//    Rectangle rectangle(72, 144);
-//  }
-//  Section( "Spacer" )
-//  {
-//    Spacer spacer(72);
-//  }
+
+    
+    
 }
