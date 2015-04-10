@@ -14,8 +14,7 @@ const string Path::buildPS()
     
     buff << "gsave\nnewpath\n";
     
-    if (_item != nullptr)
-        buff << _item->buildPS();
+    buff << _item->buildPS();
     
     buff << "grestore\n";
     

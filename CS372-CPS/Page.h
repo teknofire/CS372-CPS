@@ -16,11 +16,12 @@ using std::shared_ptr;
 
 #include "Postscript.h"
 #include "Shape.h"
+#include "NullPostscript.h"
 
 class Page : public Postscript
 {
 public:
-    Page(): _item(nullptr) {}
+    Page(): _item(std::make_shared<NullPostscript>()) {}
     Page(shared_ptr<Postscript> item): _item(item) {}
     const string buildPS() override;
     void createPS(std::iostream &);

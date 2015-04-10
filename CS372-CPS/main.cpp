@@ -29,6 +29,7 @@ int main() {
     
     std::fstream fp("/Users/wfisher/Desktop/output.ps", std::fstream::out);
     fp << "200 200 translate\n";
+    
     fp << path2->buildPS();
     page.createPS(fp);
     

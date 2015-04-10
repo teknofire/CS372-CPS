@@ -13,9 +13,7 @@ const string Page::buildPS()
 {
     std::stringstream buff;
     
-    if (_item != nullptr)
-        buff << _item->buildPS();
-    
+    buff << _item->buildPS();
     buff << "showpage\n";
     
     return buff.str();
