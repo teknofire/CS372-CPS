@@ -15,6 +15,7 @@
 #include "Square.h"
 #include "Triangle.h"
 #include "Rectangle.h"
+#include "Rotate.h"
 #include <memory>
 
 using std::shared_ptr;
@@ -37,6 +38,9 @@ int main() {
     shared_ptr<Path> rectanglePath = make_shared<Path>(rectangle);
     
     
+    shared_ptr<Rotate> rotatedPentagon = make_shared<Rotate>(pentagon, 180);
+    shared_ptr<Path> rotatedPentagonPath = make_shared<Path>(rotatedPentagon);
+    
 //    Page page(path1);
     
     std::fstream fp("/Users/wfisher/Desktop/output.ps", std::fstream::out);
@@ -47,6 +51,7 @@ int main() {
     fp << centerPath->buildPS();
     fp << trianglePath->buildPS();
     fp << rectanglePath->buildPS();
+    fp << rotatedPentagonPath->buildPS();
     fp << "showpage\n";
     
 //    page.createPS(fp);

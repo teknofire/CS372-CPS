@@ -18,6 +18,7 @@
 #include "Triangle.h"
 #include "Rectangle.h"
 #include "Spacer.h"
+#include "Rotate.h"
 
 #include <iostream>
 #include <memory>
@@ -115,6 +116,39 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(AreSame(pentagon->getBoundingBoxWidth(), 1.61803));
         REQUIRE(AreSame(pentagon->getCurrentPositionX(), 1.61803/2.0));
         REQUIRE(AreSame(pentagon->getCurrentPositionY(), 1.53884/2.0));
+        
+        SECTION( "90 Rotated shape" )
+        {
+            shared_ptr<Shape> rotated = make_shared<Rotate>(pentagon, 90);
+            
+            REQUIRE(rotated->buildPS() == "90 rotate\n" + pentagon->buildPS());
+            REQUIRE(AreSame(rotated->getBoundingBoxHeight(), 1.61803));
+            REQUIRE(AreSame(rotated->getBoundingBoxWidth(), 1.53884));
+            REQUIRE(AreSame(rotated->getCurrentPositionX(), 1.53884/2.0));
+            REQUIRE(AreSame(rotated->getCurrentPositionY(), 1.61803/2.0));
+        }
+        
+        SECTION( "270 Rotated shape" )
+        {
+            shared_ptr<Shape> rotated3 = make_shared<Rotate>(pentagon, 270);
+            
+            REQUIRE(rotated3->buildPS() == "270 rotate\n" + pentagon->buildPS());
+            REQUIRE(AreSame(rotated3->getBoundingBoxHeight(), 1.61803));
+            REQUIRE(AreSame(rotated3->getBoundingBoxWidth(), 1.53884));
+            REQUIRE(AreSame(rotated3->getCurrentPositionX(), 1.53884/2.0));
+            REQUIRE(AreSame(rotated3->getCurrentPositionY(), 1.61803/2.0));
+        }
+        
+        SECTION( "180 Rotated shape" )
+        {
+            shared_ptr<Shape> rotated2 = make_shared<Rotate>(pentagon, 180);
+            
+            REQUIRE(rotated2->buildPS() == "180 rotate\n" + pentagon->buildPS());
+            REQUIRE(AreSame(rotated2->getBoundingBoxHeight(), 1.53884));
+            REQUIRE(AreSame(rotated2->getBoundingBoxWidth(), 1.61803));
+            REQUIRE(AreSame(rotated2->getCurrentPositionX(), 1.61803/2.0));
+            REQUIRE(AreSame(rotated2->getCurrentPositionY(), 1.53884/2.0));
+        }
     }
     
     SECTION( "6 Sided Polygon")
@@ -150,7 +184,6 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(AreSame(spacer->getCurrentPositionX(), 0.5));
         REQUIRE(AreSame(spacer->getCurrentPositionY(), 1));
     }
-
 }
 
 TEST_CASE( "Postscript", "[postcript]")

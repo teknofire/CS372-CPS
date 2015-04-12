@@ -31,6 +31,8 @@
 		A38D1A821ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A7F1ADB1A1F00EA73C5 /* Rectangle.cpp */; };
 		A38D1A851ADB230600EA73C5 /* Spacer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A831ADB230600EA73C5 /* Spacer.cpp */; };
 		A38D1A861ADB230600EA73C5 /* Spacer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A831ADB230600EA73C5 /* Spacer.cpp */; };
+		A38D1A891ADB270200EA73C5 /* Rotate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A871ADB270200EA73C5 /* Rotate.cpp */; };
+		A38D1A8A1ADB270200EA73C5 /* Rotate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A871ADB270200EA73C5 /* Rotate.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +90,8 @@
 		A38D1A801ADB1A1F00EA73C5 /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
 		A38D1A831ADB230600EA73C5 /* Spacer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Spacer.cpp; sourceTree = "<group>"; };
 		A38D1A841ADB230600EA73C5 /* Spacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spacer.h; sourceTree = "<group>"; };
+		A38D1A871ADB270200EA73C5 /* Rotate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rotate.cpp; sourceTree = "<group>"; };
+		A38D1A881ADB270200EA73C5 /* Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rotate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				A38D1A801ADB1A1F00EA73C5 /* Rectangle.h */,
 				A38D1A831ADB230600EA73C5 /* Spacer.cpp */,
 				A38D1A841ADB230600EA73C5 /* Spacer.h */,
+				A38D1A871ADB270200EA73C5 /* Rotate.cpp */,
+				A38D1A881ADB270200EA73C5 /* Rotate.h */,
 			);
 			path = "CS372-CPS";
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 				A38D1A6D1AD7786800EA73C5 /* Path.cpp in Sources */,
 				A38D1A5D1AD72A9500EA73C5 /* Circle.cpp in Sources */,
 				A38D1A5F1AD72A9500EA73C5 /* Shape.cpp in Sources */,
+				A38D1A891ADB270200EA73C5 /* Rotate.cpp in Sources */,
 				A38D1A651AD7751F00EA73C5 /* Page.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +285,7 @@
 				A38D1A6E1AD7786800EA73C5 /* Path.cpp in Sources */,
 				A38D1A4F1AD3376D00EA73C5 /* main.cpp in Sources */,
 				A38D1A601AD72A9B00EA73C5 /* Circle.cpp in Sources */,
+				A38D1A8A1ADB270200EA73C5 /* Rotate.cpp in Sources */,
 				A38D1A621AD72AA700EA73C5 /* Shape.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
