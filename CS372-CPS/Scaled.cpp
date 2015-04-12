@@ -10,30 +10,33 @@
 
 double Scaled::getBoundingBoxHeight(){
     
-    //return _shape->getBoundingBoxHeight() * _fy;
-    return 0;
+    return _shape->getBoundingBoxHeight() * _fy;
+    
 }
 
 double Scaled::getBoundingBoxWidth(){
     
-    //return _shape->getBoundingBoxWidth() * _fx;
-return 0;
+    return _shape->getBoundingBoxWidth() * _fx;
+    
 }
 
 double Scaled::getCurrentPositionX(){
 
-    //return getBoundingBoxWidth() / 2;
-    return 0;
+    return getBoundingBoxWidth() / 2;
+    
 }
 
 double Scaled::getCurrentPositionY(){
 
-    //return getBoundingBoxHeight() / 2;
-    return 0;
+    return getBoundingBoxHeight() / 2;
+
 }
 
 const string Scaled::buildPS(){
 
-    return "";
-
+    std::stringstream buff;
+    buff << _fx << " " << _fy << " scale\n";
+    buff << _shape->buildPS();
+    
+    return buff.str();
 }

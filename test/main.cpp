@@ -97,15 +97,21 @@ TEST_CASE( "Shapes", "[shape]")
             
             shared_ptr<Shape> scaledSquare = make_shared<Scaled>(square, 2.0, 2.0);
             
-//            REQUIRE(AreSame(scaledSquare->getBoundingBoxHeight(), 2.0));
-//            REQUIRE(AreSame(scaledSquare->getBoundingBoxWidth(), 2.0));
-//            REQUIRE(AreSame(scaledSquare->getCurrentPositionX(), 1.0));
-//            REQUIRE(AreSame(scaledSquare->getCurrentPositionY(), 1.0));
-//            
+            REQUIRE(scaledSquare->buildPS() == "2 2 scale\n" + square->buildPS());
+            REQUIRE(AreSame(scaledSquare->getBoundingBoxHeight(), 2.0));
+            REQUIRE(AreSame(scaledSquare->getBoundingBoxWidth(), 2.0));
+            REQUIRE(AreSame(scaledSquare->getCurrentPositionX(), 1.0));
+            REQUIRE(AreSame(scaledSquare->getCurrentPositionY(), 1.0));
             
+            shared_ptr<Shape> scaledSquare2 = make_shared<Scaled>(square, 10.0, 1.0);
+            
+            REQUIRE(scaledSquare2->buildPS() == "10 1 scale\n" + square->buildPS());
+            REQUIRE(AreSame(scaledSquare2->getBoundingBoxHeight(), 1.0));
+            REQUIRE(AreSame(scaledSquare2->getBoundingBoxWidth(), 10.0));
+            REQUIRE(AreSame(scaledSquare2->getCurrentPositionX(), 5.0));
+            REQUIRE(AreSame(scaledSquare2->getCurrentPositionY(), 0.5));
             
         }
-        
     }
     
     SECTION( "Triangle" )
