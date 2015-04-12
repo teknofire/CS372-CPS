@@ -19,6 +19,7 @@
 #include "Rectangle.h"
 #include "Spacer.h"
 #include "Rotate.h"
+#include "Scaled.h"
 
 #include <iostream>
 #include <memory>
@@ -91,6 +92,20 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(AreSame(square->getBoundingBoxWidth(), 1.0));
         REQUIRE(AreSame(square->getCurrentPositionX(), 0.5));
         REQUIRE(AreSame(square->getCurrentPositionY(), 0.5));
+        
+        SECTION( "Scaled Square" ){
+            
+            shared_ptr<Shape> scaledSquare = make_shared<Scaled>(square, 2.0, 2.0);
+            
+//            REQUIRE(AreSame(scaledSquare->getBoundingBoxHeight(), 2.0));
+//            REQUIRE(AreSame(scaledSquare->getBoundingBoxWidth(), 2.0));
+//            REQUIRE(AreSame(scaledSquare->getCurrentPositionX(), 1.0));
+//            REQUIRE(AreSame(scaledSquare->getCurrentPositionY(), 1.0));
+//            
+            
+            
+        }
+        
     }
     
     SECTION( "Triangle" )

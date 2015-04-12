@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F7608B11ADB2BAF00F7BB42 /* Scaled.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608AF1ADB2BAF00F7BB42 /* Scaled.cpp */; };
 		A38D1A421AD3365200EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A411AD3365200EA73C5 /* main.cpp */; };
 		A38D1A4F1AD3376D00EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A4E1AD3376D00EA73C5 /* main.cpp */; };
 		A38D1A5D1AD72A9500EA73C5 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A571AD72A9500EA73C5 /* Circle.cpp */; };
@@ -57,6 +58,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F7608AF1ADB2BAF00F7BB42 /* Scaled.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scaled.cpp; sourceTree = "<group>"; };
+		4F7608B01ADB2BAF00F7BB42 /* Scaled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scaled.h; sourceTree = "<group>"; };
 		4FDAA2A41AD72EF20016FD24 /* Polygons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Polygons.cpp; sourceTree = "<group>"; };
 		4FDAA2A51AD72EF20016FD24 /* Polygons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Polygons.h; sourceTree = "<group>"; };
 		4FDAA2A61AD72EF20016FD24 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				A38D1A831ADB230600EA73C5 /* Spacer.cpp */,
 				A38D1A841ADB230600EA73C5 /* Spacer.h */,
 				A38D1A871ADB270200EA73C5 /* Rotate.cpp */,
+				4F7608AF1ADB2BAF00F7BB42 /* Scaled.cpp */,
+				4F7608B01ADB2BAF00F7BB42 /* Scaled.h */,
 				A38D1A881ADB270200EA73C5 /* Rotate.h */,
 			);
 			path = "CS372-CPS";
@@ -255,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38D1A5E1AD72A9500EA73C5 /* Polygons.cpp in Sources */,
+				4F7608B11ADB2BAF00F7BB42 /* Scaled.cpp in Sources */,
 				A38D1A791ADB184400EA73C5 /* Square.cpp in Sources */,
 				A38D1A751AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */,
 				A38D1A7D1ADB18E100EA73C5 /* Triangle.cpp in Sources */,

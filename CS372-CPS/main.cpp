@@ -16,6 +16,7 @@
 #include "Triangle.h"
 #include "Rectangle.h"
 #include "Rotate.h"
+#include "Scaled.h"
 #include <memory>
 
 using std::shared_ptr;
@@ -43,7 +44,7 @@ int main() {
     
 //    Page page(path1);
     
-    std::fstream fp("/Users/wfisher/Desktop/output.ps", std::fstream::out);
+    std::fstream fp("/Users/test/Desktop/output.ps", std::fstream::out);
     fp << "200 200 translate\n";
     fp << pentagonPath->buildPS();
     fp << circlePath->buildPS();
