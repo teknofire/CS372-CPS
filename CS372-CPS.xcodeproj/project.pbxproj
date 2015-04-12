@@ -23,6 +23,12 @@
 		A38D1A6E1AD7786800EA73C5 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A6B1AD7786800EA73C5 /* Path.cpp */; };
 		A38D1A751AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A731AD87AE900EA73C5 /* NullPostscript.cpp */; };
 		A38D1A761AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A731AD87AE900EA73C5 /* NullPostscript.cpp */; };
+		A38D1A791ADB184400EA73C5 /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A771ADB184400EA73C5 /* Square.cpp */; };
+		A38D1A7A1ADB184400EA73C5 /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A771ADB184400EA73C5 /* Square.cpp */; };
+		A38D1A7D1ADB18E100EA73C5 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A7B1ADB18E100EA73C5 /* Triangle.cpp */; };
+		A38D1A7E1ADB18E100EA73C5 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A7B1ADB18E100EA73C5 /* Triangle.cpp */; };
+		A38D1A811ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A7F1ADB1A1F00EA73C5 /* Rectangle.cpp */; };
+		A38D1A821ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A7F1ADB1A1F00EA73C5 /* Rectangle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +78,12 @@
 		A38D1A6C1AD7786800EA73C5 /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
 		A38D1A731AD87AE900EA73C5 /* NullPostscript.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NullPostscript.cpp; sourceTree = "<group>"; };
 		A38D1A741AD87AE900EA73C5 /* NullPostscript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullPostscript.h; sourceTree = "<group>"; };
+		A38D1A771ADB184400EA73C5 /* Square.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Square.cpp; sourceTree = "<group>"; };
+		A38D1A781ADB184400EA73C5 /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Square.h; sourceTree = "<group>"; };
+		A38D1A7B1ADB18E100EA73C5 /* Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle.cpp; sourceTree = "<group>"; };
+		A38D1A7C1ADB18E100EA73C5 /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
+		A38D1A7F1ADB1A1F00EA73C5 /* Rectangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rectangle.cpp; sourceTree = "<group>"; };
+		A38D1A801ADB1A1F00EA73C5 /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +140,12 @@
 				A38D1A411AD3365200EA73C5 /* main.cpp */,
 				A38D1A6B1AD7786800EA73C5 /* Path.cpp */,
 				A38D1A6C1AD7786800EA73C5 /* Path.h */,
+				A38D1A771ADB184400EA73C5 /* Square.cpp */,
+				A38D1A781ADB184400EA73C5 /* Square.h */,
+				A38D1A7B1ADB18E100EA73C5 /* Triangle.cpp */,
+				A38D1A7C1ADB18E100EA73C5 /* Triangle.h */,
+				A38D1A7F1ADB1A1F00EA73C5 /* Rectangle.cpp */,
+				A38D1A801ADB1A1F00EA73C5 /* Rectangle.h */,
 			);
 			path = "CS372-CPS";
 			sourceTree = "<group>";
@@ -225,7 +243,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38D1A5E1AD72A9500EA73C5 /* Polygons.cpp in Sources */,
+				A38D1A791ADB184400EA73C5 /* Square.cpp in Sources */,
 				A38D1A751AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */,
+				A38D1A7D1ADB18E100EA73C5 /* Triangle.cpp in Sources */,
+				A38D1A811ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */,
 				A38D1A421AD3365200EA73C5 /* main.cpp in Sources */,
 				A38D1A681AD7758300EA73C5 /* Postscript.cpp in Sources */,
 				A38D1A6D1AD7786800EA73C5 /* Path.cpp in Sources */,
@@ -240,7 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38D1A6A1AD7781700EA73C5 /* Page.cpp in Sources */,
+				A38D1A7A1ADB184400EA73C5 /* Square.cpp in Sources */,
 				A38D1A761AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */,
+				A38D1A7E1ADB18E100EA73C5 /* Triangle.cpp in Sources */,
+				A38D1A821ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */,
 				A38D1A611AD72AA400EA73C5 /* Polygons.cpp in Sources */,
 				A38D1A691AD775D800EA73C5 /* Postscript.cpp in Sources */,
 				A38D1A6E1AD7786800EA73C5 /* Path.cpp in Sources */,

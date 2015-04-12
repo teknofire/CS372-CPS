@@ -14,6 +14,9 @@
 #include "Polygons.h"
 #include "Page.h"
 #include "Path.h"
+#include "Square.h"
+#include "Triangle.h"
+#include "Rectangle.h"
 
 #include <iostream>
 #include <memory>
@@ -78,12 +81,21 @@ TEST_CASE( "Shapes", "[shape]")
         
     }
     
+    SECTION( "Square" )
+    {
+        shared_ptr<Shape> square = make_shared<Square>(1);
+        
+        REQUIRE(AreSame(square->getBoundingBoxHeight(), 1.0));
+        REQUIRE(AreSame(square->getBoundingBoxWidth(), 1.0));
+        REQUIRE(AreSame(square->getCurrentPositionX(), 0.5));
+        REQUIRE(AreSame(square->getCurrentPositionY(), 0.5));
+    }
+    
     SECTION( "Triangle" )
     {
-        double numberOfSides = 3;
         double sideLength = 1;
         
-        shared_ptr<Shape> triangle = make_shared<Polygons>(numberOfSides, sideLength);
+        shared_ptr<Shape> triangle = make_shared<Triangle>(sideLength);
         
         REQUIRE(AreSame(triangle->getBoundingBoxHeight(), .866025));
         REQUIRE(triangle->getBoundingBoxWidth() == 1.0);
@@ -118,6 +130,21 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(AreSame(hexagon->getCurrentPositionY(), 1.73205/2.0));
         
     }
+    
+    SECTION( "Rectangle")
+    {
+        
+        shared_ptr<Shape> rectangle = make_shared<Rectangle>(1, 2);
+        
+        REQUIRE(AreSame(rectangle->getBoundingBoxHeight(), 2));
+        REQUIRE(AreSame(rectangle->getBoundingBoxWidth(), 1));
+        REQUIRE(AreSame(rectangle->getCurrentPositionX(), 0.5));
+        REQUIRE(AreSame(rectangle->getCurrentPositionY(), 1));
+    }
+//    SECTION("Spacer")
+//    {
+//        
+//    }
 
 }
 
@@ -159,5 +186,12 @@ TEST_CASE( "Postscript", "[postcript]")
         Page page(path);
         
         REQUIRE(page.buildPS() == "gsave\nnewpath\ngrestore\nshowpage\n");
+    }
+    
+    SECTION("Rectangle Postscript")
+    {
+        shared_ptr<Shape> rectangle = make_shared<Rectangle>(1, 2);
+        string testString = "-0.5 -1 moveto\n1 0 rlineto\n0 2 rlineto\n-1 0 rlineto\nclosepath\nstroke\n";
+        REQUIRE(rectangle->buildPS() == testString);
     }
 }
