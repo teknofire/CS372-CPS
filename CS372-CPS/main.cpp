@@ -42,9 +42,13 @@ int main() {
     shared_ptr<Rotate> rotatedPentagon = make_shared<Rotate>(pentagon, 180);
     shared_ptr<Path> rotatedPentagonPath = make_shared<Path>(rotatedPentagon);
     
+    shared_ptr<Scaled> scaledTriangle = make_shared<Scaled>(triangle, 5, 5);
+    shared_ptr<Path> scaledTrianglePath = make_shared<Path>(scaledTriangle);
+    
+    
 //    Page page(path1);
     
-    std::fstream fp("/Users/test/Desktop/output.ps", std::fstream::out);
+    std::fstream fp("output.ps", std::fstream::out);
     fp << "200 200 translate\n";
     fp << pentagonPath->buildPS();
     fp << circlePath->buildPS();
@@ -53,6 +57,7 @@ int main() {
     fp << trianglePath->buildPS();
     fp << rectanglePath->buildPS();
     fp << rotatedPentagonPath->buildPS();
+    fp << scaledTrianglePath->buildPS();
     fp << "showpage\n";
     
 //    page.createPS(fp);
