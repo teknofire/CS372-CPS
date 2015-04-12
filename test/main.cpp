@@ -17,6 +17,7 @@
 #include "Square.h"
 #include "Triangle.h"
 #include "Rectangle.h"
+#include "Spacer.h"
 
 #include <iostream>
 #include <memory>
@@ -141,10 +142,14 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(AreSame(rectangle->getCurrentPositionX(), 0.5));
         REQUIRE(AreSame(rectangle->getCurrentPositionY(), 1));
     }
-//    SECTION("Spacer")
-//    {
-//        
-//    }
+    SECTION("Spacer")
+    {
+        shared_ptr<Shape> spacer = make_shared<Spacer>(1, 2);
+        REQUIRE(AreSame(spacer->getBoundingBoxHeight(), 2));
+        REQUIRE(AreSame(spacer->getBoundingBoxWidth(), 1));
+        REQUIRE(AreSame(spacer->getCurrentPositionX(), 0.5));
+        REQUIRE(AreSame(spacer->getCurrentPositionY(), 1));
+    }
 
 }
 
@@ -193,5 +198,12 @@ TEST_CASE( "Postscript", "[postcript]")
         shared_ptr<Shape> rectangle = make_shared<Rectangle>(1, 2);
         string testString = "-0.5 -1 moveto\n1 0 rlineto\n0 2 rlineto\n-1 0 rlineto\nclosepath\nstroke\n";
         REQUIRE(rectangle->buildPS() == testString);
+    }
+    SECTION("Spacer Postscript")
+    {
+        shared_ptr<Shape> spacer = make_shared<Spacer>(1, 2);
+        string testString = "";
+        REQUIRE(spacer->buildPS()== testString);
+
     }
 }
