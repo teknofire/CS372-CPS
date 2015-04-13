@@ -13,6 +13,8 @@
 		4F7608B61ADB3A0700F7BB42 /* Layered.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608B31ADB3A0700F7BB42 /* Layered.cpp */; };
 		4F7608B91ADB455E00F7BB42 /* Vertical.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608B71ADB455E00F7BB42 /* Vertical.cpp */; };
 		4F7608BA1ADB455E00F7BB42 /* Vertical.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608B71ADB455E00F7BB42 /* Vertical.cpp */; };
+		4F9629701ADB53C500912A4F /* Horizontal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F96296E1ADB53C500912A4F /* Horizontal.cpp */; };
+		4F9629711ADB53CB00912A4F /* Horizontal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F96296E1ADB53C500912A4F /* Horizontal.cpp */; };
 		A38D1A421AD3365200EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A411AD3365200EA73C5 /* main.cpp */; };
 		A38D1A4F1AD3376D00EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A4E1AD3376D00EA73C5 /* main.cpp */; };
 		A38D1A5D1AD72A9500EA73C5 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A571AD72A9500EA73C5 /* Circle.cpp */; };
@@ -69,6 +71,8 @@
 		4F7608B41ADB3A0700F7BB42 /* Layered.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layered.h; sourceTree = "<group>"; };
 		4F7608B71ADB455E00F7BB42 /* Vertical.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vertical.cpp; sourceTree = "<group>"; };
 		4F7608B81ADB455E00F7BB42 /* Vertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertical.h; sourceTree = "<group>"; };
+		4F96296E1ADB53C500912A4F /* Horizontal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Horizontal.cpp; sourceTree = "<group>"; };
+		4F96296F1ADB53C500912A4F /* Horizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Horizontal.h; sourceTree = "<group>"; };
 		4FDAA2A41AD72EF20016FD24 /* Polygons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Polygons.cpp; sourceTree = "<group>"; };
 		4FDAA2A51AD72EF20016FD24 /* Polygons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Polygons.h; sourceTree = "<group>"; };
 		4FDAA2A61AD72EF20016FD24 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				A38D1A671AD7758300EA73C5 /* Postscript.h */,
 				A38D1A411AD3365200EA73C5 /* main.cpp */,
 				4F7608B71ADB455E00F7BB42 /* Vertical.cpp */,
+				4F96296E1ADB53C500912A4F /* Horizontal.cpp */,
+				4F96296F1ADB53C500912A4F /* Horizontal.h */,
 				4F7608B81ADB455E00F7BB42 /* Vertical.h */,
 				4F7608B31ADB3A0700F7BB42 /* Layered.cpp */,
 				4F7608B41ADB3A0700F7BB42 /* Layered.h */,
@@ -273,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38D1A5E1AD72A9500EA73C5 /* Polygons.cpp in Sources */,
+				4F9629701ADB53C500912A4F /* Horizontal.cpp in Sources */,
 				4F7608B11ADB2BAF00F7BB42 /* Scaled.cpp in Sources */,
 				A38D1A791ADB184400EA73C5 /* Square.cpp in Sources */,
 				A38D1A751AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */,
@@ -296,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38D1A6A1AD7781700EA73C5 /* Page.cpp in Sources */,
+				4F9629711ADB53CB00912A4F /* Horizontal.cpp in Sources */,
 				4F7608B21ADB363D00F7BB42 /* Scaled.cpp in Sources */,
 				A38D1A7A1ADB184400EA73C5 /* Square.cpp in Sources */,
 				A38D1A761AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */,

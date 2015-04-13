@@ -19,6 +19,8 @@
 #include "Scaled.h"
 #include "Layered.h"
 #include "Vertical.h"
+#include "Horizontal.h"
+#include "Spacer.h"
 #include <memory>
 #include <initializer_list>
 
@@ -52,6 +54,10 @@ int main() {
     shared_ptr<Layered> layer = make_shared<Layered>(std::initializer_list<shared_ptr<Shape>>({triangle, rectangle, circle}));
     
     shared_ptr<Vertical> vert = make_shared<Vertical>(std::initializer_list<shared_ptr<Shape>>({triangle, rectangle, circle}));
+    shared_ptr<Horizontal> horizontal = make_shared<Horizontal>(std::initializer_list<shared_ptr<Shape>>({triangle, rectangle, circle}));
+    
+    shared_ptr<Shape> spacer = make_shared<Spacer>(pentagon->getBoundingBoxWidth(), pentagon->getBoundingBoxHeight());
+    shared_ptr<Vertical> vert2 = make_shared<Vertical>(std::vector<shared_ptr<Shape>>{triangle, spacer, circle});
     
     
 //    Page page(path1);
@@ -74,6 +80,14 @@ int main() {
     
     fp << "200 200 translate\n";
     fp << vert->buildPS();
+    fp << "showpage\n";
+    
+    fp << "200 200 translate\n";
+    fp << vert2->buildPS();
+    fp << "showpage\n";
+    
+    fp << "200 200 translate\n";
+    fp << horizontal->buildPS();
     fp << "showpage\n";
     
 //    page.createPS(fp);
