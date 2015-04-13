@@ -53,14 +53,18 @@ const string Vertical::buildPS(){
     
     std::stringstream buff;
     
-    for (auto shape : _shapes){
+    auto index = _shapes.begin();
+    
+    buff << Path(*index).buildPS();
+    buff << "0 " << (*index)->getCurrentPositionY() << " translate\n";
+    
+    for (++index; index != _shapes.end(); ++index){
         
-        Path newPath(shape);
-        
+        buff << "0 " << (*index)->getCurrentPositionY() << " translate\n";
+        Path newPath(*index);
         buff << newPath.buildPS();
-        
-        buff << "0 " << shape->getBoundingBoxHeight() << " translate\n";
-        
+        buff << "0 " << (*index)->getCurrentPositionY() << " translate\n";
+       
     }
     
     return buff.str();

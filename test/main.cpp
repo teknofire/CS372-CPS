@@ -79,8 +79,6 @@ TEST_CASE( "Shapes", "[shape]")
             REQUIRE(AreSame(vert->getCurrentPositionY(), (21.866025 / 2)));
             
         }
-        
-        
     }
     
     SECTION( "Circle" )
