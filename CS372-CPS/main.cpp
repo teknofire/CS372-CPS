@@ -18,13 +18,16 @@
 #include "Rotate.h"
 #include "Scaled.h"
 #include "Layered.h"
+#include "Vertical.h"
 #include <memory>
+#include <initializer_list>
 
 using std::shared_ptr;
 using std::make_shared;
 
 int main() {
     double radius = 100;
+    
     shared_ptr<Shape> circle = make_shared<Circle>(radius);
     shared_ptr<Shape> center = make_shared<Circle>(1);
     shared_ptr<Shape> pentagon = make_shared<Polygons>(5, 72);
@@ -46,8 +49,9 @@ int main() {
     shared_ptr<Scaled> scaledTriangle = make_shared<Scaled>(triangle, 5, 5);
     shared_ptr<Path> scaledTrianglePath = make_shared<Path>(scaledTriangle);
     
-    shared_ptr<Layered> layer = make_shared<Layered>(std::vector<shared_ptr<Shape>>{triangle, rectangle, circle});
+    shared_ptr<Layered> layer = make_shared<Layered>(std::initializer_list<shared_ptr<Shape>>({triangle, rectangle, circle}));
     
+    shared_ptr<Vertical> vert = make_shared<Vertical>(std::initializer_list<shared_ptr<Shape>>({triangle, rectangle, circle}));
     
     
 //    Page page(path1);
@@ -66,6 +70,10 @@ int main() {
     
     fp << "200 200 translate\n";
     fp << layer->buildPS();
+    fp << "showpage\n";
+    
+    fp << "200 200 translate\n";
+    fp << vert->buildPS();
     fp << "showpage\n";
     
 //    page.createPS(fp);
