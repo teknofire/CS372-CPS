@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4F7608B11ADB2BAF00F7BB42 /* Scaled.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608AF1ADB2BAF00F7BB42 /* Scaled.cpp */; };
 		4F7608B21ADB363D00F7BB42 /* Scaled.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608AF1ADB2BAF00F7BB42 /* Scaled.cpp */; };
+		4F7608B51ADB3A0700F7BB42 /* Layered.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608B31ADB3A0700F7BB42 /* Layered.cpp */; };
+		4F7608B61ADB3A0700F7BB42 /* Layered.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608B31ADB3A0700F7BB42 /* Layered.cpp */; };
+		4F7608B91ADB455E00F7BB42 /* Vertical.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608B71ADB455E00F7BB42 /* Vertical.cpp */; };
+		4F7608BA1ADB455E00F7BB42 /* Vertical.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608B71ADB455E00F7BB42 /* Vertical.cpp */; };
 		A38D1A421AD3365200EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A411AD3365200EA73C5 /* main.cpp */; };
 		A38D1A4F1AD3376D00EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A4E1AD3376D00EA73C5 /* main.cpp */; };
 		A38D1A5D1AD72A9500EA73C5 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A571AD72A9500EA73C5 /* Circle.cpp */; };
@@ -61,6 +65,10 @@
 /* Begin PBXFileReference section */
 		4F7608AF1ADB2BAF00F7BB42 /* Scaled.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scaled.cpp; sourceTree = "<group>"; };
 		4F7608B01ADB2BAF00F7BB42 /* Scaled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scaled.h; sourceTree = "<group>"; };
+		4F7608B31ADB3A0700F7BB42 /* Layered.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Layered.cpp; sourceTree = "<group>"; };
+		4F7608B41ADB3A0700F7BB42 /* Layered.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layered.h; sourceTree = "<group>"; };
+		4F7608B71ADB455E00F7BB42 /* Vertical.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vertical.cpp; sourceTree = "<group>"; };
+		4F7608B81ADB455E00F7BB42 /* Vertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertical.h; sourceTree = "<group>"; };
 		4FDAA2A41AD72EF20016FD24 /* Polygons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Polygons.cpp; sourceTree = "<group>"; };
 		4FDAA2A51AD72EF20016FD24 /* Polygons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Polygons.h; sourceTree = "<group>"; };
 		4FDAA2A61AD72EF20016FD24 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
@@ -70,7 +78,7 @@
 		A38D1A3E1AD3365200EA73C5 /* CS372-CPS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CS372-CPS"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38D1A411AD3365200EA73C5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A38D1A4C1AD3376D00EA73C5 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
-		A38D1A4E1AD3376D00EA73C5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A38D1A4E1AD3376D00EA73C5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; usesTabs = 1; };
 		A38D1A531AD3381900EA73C5 /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
 		A38D1A571AD72A9500EA73C5 /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Circle.cpp; path = test/Circle.cpp; sourceTree = SOURCE_ROOT; };
 		A38D1A581AD72A9500EA73C5 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Circle.h; path = test/Circle.h; sourceTree = SOURCE_ROOT; };
@@ -150,6 +158,10 @@
 				A38D1A661AD7758300EA73C5 /* Postscript.cpp */,
 				A38D1A671AD7758300EA73C5 /* Postscript.h */,
 				A38D1A411AD3365200EA73C5 /* main.cpp */,
+				4F7608B71ADB455E00F7BB42 /* Vertical.cpp */,
+				4F7608B81ADB455E00F7BB42 /* Vertical.h */,
+				4F7608B31ADB3A0700F7BB42 /* Layered.cpp */,
+				4F7608B41ADB3A0700F7BB42 /* Layered.h */,
 				A38D1A6B1AD7786800EA73C5 /* Path.cpp */,
 				A38D1A6C1AD7786800EA73C5 /* Path.h */,
 				A38D1A771ADB184400EA73C5 /* Square.cpp */,
@@ -267,8 +279,10 @@
 				A38D1A7D1ADB18E100EA73C5 /* Triangle.cpp in Sources */,
 				A38D1A811ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */,
 				A38D1A851ADB230600EA73C5 /* Spacer.cpp in Sources */,
+				4F7608B91ADB455E00F7BB42 /* Vertical.cpp in Sources */,
 				A38D1A421AD3365200EA73C5 /* main.cpp in Sources */,
 				A38D1A681AD7758300EA73C5 /* Postscript.cpp in Sources */,
+				4F7608B51ADB3A0700F7BB42 /* Layered.cpp in Sources */,
 				A38D1A6D1AD7786800EA73C5 /* Path.cpp in Sources */,
 				A38D1A5D1AD72A9500EA73C5 /* Circle.cpp in Sources */,
 				A38D1A5F1AD72A9500EA73C5 /* Shape.cpp in Sources */,
@@ -288,8 +302,10 @@
 				A38D1A7E1ADB18E100EA73C5 /* Triangle.cpp in Sources */,
 				A38D1A821ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */,
 				A38D1A861ADB230600EA73C5 /* Spacer.cpp in Sources */,
+				4F7608BA1ADB455E00F7BB42 /* Vertical.cpp in Sources */,
 				A38D1A611AD72AA400EA73C5 /* Polygons.cpp in Sources */,
 				A38D1A691AD775D800EA73C5 /* Postscript.cpp in Sources */,
+				4F7608B61ADB3A0700F7BB42 /* Layered.cpp in Sources */,
 				A38D1A6E1AD7786800EA73C5 /* Path.cpp in Sources */,
 				A38D1A4F1AD3376D00EA73C5 /* main.cpp in Sources */,
 				A38D1A601AD72A9B00EA73C5 /* Circle.cpp in Sources */,

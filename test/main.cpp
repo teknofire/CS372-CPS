@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Will Fisher. All rights reserved.
 //
 
-
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "Shape.h"
@@ -20,6 +19,8 @@
 #include "Spacer.h"
 #include "Rotate.h"
 #include "Scaled.h"
+#include "Layered.h"
+#include "Vertical.h"
 
 #include <iostream>
 #include <memory>
@@ -39,11 +40,52 @@ bool AreSame(double a, double b) {
 //Visual Inspection of resulting file.ps
 TEST_CASE( "Shapes", "[shape]")
 {
-
+	
+    double radius = 10;
+    shared_ptr<Shape> circle = make_shared<Circle>(radius);
+    double numberOfSides = 4;
+    double sideLength = 1;
+    shared_ptr<Shape> square = make_shared<Polygons>(numberOfSides, sideLength);
+    shared_ptr<Shape> triangle = make_shared<Triangle>(sideLength);
+    
+    shared_ptr<Path> circlePath = make_shared<Path>(circle);
+    shared_ptr<Path> squarePath = make_shared<Path>(square);
+    shared_ptr<Path> trianglePath = make_shared<Path>(triangle);
+    
+    SECTION( "Layered Shapes" ) {
+        
+        shared_ptr<Layered> layer = make_shared<Layered>(std::vector<shared_ptr<Shape>> {circle, square, triangle});
+        
+        REQUIRE(layer->buildPS() == circlePath->buildPS() + squarePath->buildPS() + trianglePath->buildPS());
+        REQUIRE(layer->getBoundingBoxHeight() == 20);
+        REQUIRE(layer->getBoundingBoxWidth() == 20);
+        REQUIRE(layer->getCurrentPositionX() == 10);
+        REQUIRE(layer->getCurrentPositionY() == 10);
+        
+        SECTION( "Vertical Shapes" ){
+			
+			std::stringstream buff;
+			
+			buff << circlePath->buildPS() << "0 20 translate\n";
+			buff << squarePath->buildPS() << "0 1 translate\n";
+			buff << trianglePath->buildPS() << "0 " << triangle->getBoundingBoxHeight() << " translate\n";
+			
+            shared_ptr<Vertical> vert = make_shared<Vertical>(std::vector<shared_ptr<Shape>> {circle, square, triangle});
+            
+            REQUIRE(vert->buildPS() == buff.str());
+            REQUIRE(AreSame(vert->getBoundingBoxHeight(), 21.866025));
+            REQUIRE(vert->getBoundingBoxWidth() == 20);
+            REQUIRE(vert->getCurrentPositionX() == 10);
+            REQUIRE(AreSame(vert->getCurrentPositionY(), (21.866025 / 2)));
+            
+        }
+        
+        
+    }
+    
     SECTION( "Circle" )
     {
-        double radius = 10;
-        shared_ptr<Shape> circle = make_shared<Circle>(radius);
+        
         REQUIRE(circle->getBoundingBoxHeight() == 20);
         REQUIRE(circle->getBoundingBoxWidth() == 20);
         REQUIRE(circle->getCurrentPositionX() == 10);
@@ -61,10 +103,7 @@ TEST_CASE( "Shapes", "[shape]")
     }
     SECTION( "4 sided polygon" )
     {
-        double numberOfSides = 4;
-        double sideLength = 1;
-        shared_ptr<Shape> square = make_shared<Polygons>(numberOfSides, sideLength);
-    
+        
         REQUIRE(AreSame(square->getBoundingBoxHeight(), 1.0));
         REQUIRE(AreSame(square->getBoundingBoxWidth(), 1.0));
         REQUIRE(AreSame(square->getCurrentPositionX(), 0.5));
@@ -116,9 +155,6 @@ TEST_CASE( "Shapes", "[shape]")
     
     SECTION( "Triangle" )
     {
-        double sideLength = 1;
-        
-        shared_ptr<Shape> triangle = make_shared<Triangle>(sideLength);
         
         REQUIRE(AreSame(triangle->getBoundingBoxHeight(), .866025));
         REQUIRE(triangle->getBoundingBoxWidth() == 1.0);

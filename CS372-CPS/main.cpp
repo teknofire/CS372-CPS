@@ -17,6 +17,7 @@
 #include "Rectangle.h"
 #include "Rotate.h"
 #include "Scaled.h"
+#include "Layered.h"
 #include <memory>
 
 using std::shared_ptr;
@@ -45,6 +46,9 @@ int main() {
     shared_ptr<Scaled> scaledTriangle = make_shared<Scaled>(triangle, 5, 5);
     shared_ptr<Path> scaledTrianglePath = make_shared<Path>(scaledTriangle);
     
+    shared_ptr<Layered> layer = make_shared<Layered>(std::vector<shared_ptr<Shape>>{triangle, rectangle, circle});
+    
+    
     
 //    Page page(path1);
     
@@ -60,8 +64,15 @@ int main() {
     fp << scaledTrianglePath->buildPS();
     fp << "showpage\n";
     
+    fp << "200 200 translate\n";
+    fp << layer->buildPS();
+    fp << "showpage\n";
+    
 //    page.createPS(fp);
     
     fp.close();
+    
+    
+    
     return 0;
 }
