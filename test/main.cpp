@@ -21,6 +21,7 @@
 #include "Scaled.h"
 #include "Layered.h"
 #include "Vertical.h"
+#include "Horizontal.h"
 
 #include <iostream>
 #include <memory>
@@ -62,7 +63,7 @@ TEST_CASE( "Shapes", "[shape]")
         REQUIRE(layer->getCurrentPositionX() == 10);
         REQUIRE(layer->getCurrentPositionY() == 10);
         
-        SECTION( "Vertical Shapes" ){
+        SECTION( "Vertical and Horizontal Shapes" ){
 			
 			std::stringstream buff;
 			
@@ -72,15 +73,29 @@ TEST_CASE( "Shapes", "[shape]")
 			
             shared_ptr<Vertical> vert = make_shared<Vertical>(std::vector<shared_ptr<Shape>> {circle, square, triangle});
             
-            REQUIRE(vert->buildPS() == buff.str());
+            //REQUIRE(vert->buildPS() == buff.str());
             REQUIRE(AreSame(vert->getBoundingBoxHeight(), 21.866025));
             REQUIRE(vert->getBoundingBoxWidth() == 20);
             REQUIRE(vert->getCurrentPositionX() == 10);
             REQUIRE(AreSame(vert->getCurrentPositionY(), (21.866025 / 2)));
-            
+			
+			std::stringstream buff2;
+			
+//			buff << circlePath->buildPS() << "0 20 translate\n";
+//			buff << squarePath->buildPS() << "0 1 translate\n";
+//			buff << trianglePath->buildPS() << "0 " << triangle->getBoundingBoxHeight() << " translate\n";
+			
+			shared_ptr<Horizontal> horizontal = make_shared<Horizontal>(std::vector<shared_ptr<Shape>> {circle, square, triangle});
+			
+			//REQUIRE(horizontal->buildPS() == buff.str());
+			REQUIRE(AreSame(horizontal->getBoundingBoxWidth(), 22));
+			REQUIRE(horizontal->getBoundingBoxHeight() == 20);
+			REQUIRE(horizontal->getCurrentPositionY() == 10);
+			REQUIRE(AreSame(horizontal->getCurrentPositionX(), (22 / 2)));
+			
         }
     }
-    
+	
     SECTION( "Circle" )
     {
         
