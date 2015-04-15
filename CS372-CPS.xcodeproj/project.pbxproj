@@ -19,12 +19,6 @@
 		4FDF30BF1ADC734C0094E1AA /* CustomShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF30BC1ADC734C0094E1AA /* CustomShape.cpp */; };
 		A38D1A421AD3365200EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A411AD3365200EA73C5 /* main.cpp */; };
 		A38D1A4F1AD3376D00EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A4E1AD3376D00EA73C5 /* main.cpp */; };
-		A38D1A5D1AD72A9500EA73C5 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A571AD72A9500EA73C5 /* Circle.cpp */; };
-		A38D1A5E1AD72A9500EA73C5 /* Polygons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A591AD72A9500EA73C5 /* Polygons.cpp */; };
-		A38D1A5F1AD72A9500EA73C5 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A5B1AD72A9500EA73C5 /* Shape.cpp */; };
-		A38D1A601AD72A9B00EA73C5 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A571AD72A9500EA73C5 /* Circle.cpp */; };
-		A38D1A611AD72AA400EA73C5 /* Polygons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A591AD72A9500EA73C5 /* Polygons.cpp */; };
-		A38D1A621AD72AA700EA73C5 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A5B1AD72A9500EA73C5 /* Shape.cpp */; };
 		A38D1A651AD7751F00EA73C5 /* Page.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A631AD7751F00EA73C5 /* Page.cpp */; };
 		A38D1A681AD7758300EA73C5 /* Postscript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A661AD7758300EA73C5 /* Postscript.cpp */; };
 		A38D1A691AD775D800EA73C5 /* Postscript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A661AD7758300EA73C5 /* Postscript.cpp */; };
@@ -43,6 +37,12 @@
 		A38D1A861ADB230600EA73C5 /* Spacer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A831ADB230600EA73C5 /* Spacer.cpp */; };
 		A38D1A891ADB270200EA73C5 /* Rotate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A871ADB270200EA73C5 /* Rotate.cpp */; };
 		A38D1A8A1ADB270200EA73C5 /* Rotate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A871ADB270200EA73C5 /* Rotate.cpp */; };
+		A3C3A6B71ADF0C3200AE65C6 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6B11ADF0C3200AE65C6 /* Circle.cpp */; };
+		A3C3A6B81ADF0C3200AE65C6 /* Polygons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6B31ADF0C3200AE65C6 /* Polygons.cpp */; };
+		A3C3A6B91ADF0C3200AE65C6 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6B51ADF0C3200AE65C6 /* Shape.cpp */; };
+		A3C3A6BA1ADF0C5800AE65C6 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6B11ADF0C3200AE65C6 /* Circle.cpp */; };
+		A3C3A6BB1ADF0C5B00AE65C6 /* Polygons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6B31ADF0C3200AE65C6 /* Polygons.cpp */; };
+		A3C3A6BC1ADF0C5F00AE65C6 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6B51ADF0C3200AE65C6 /* Shape.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,12 +88,6 @@
 		A38D1A4C1AD3376D00EA73C5 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38D1A4E1AD3376D00EA73C5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; usesTabs = 1; };
 		A38D1A531AD3381900EA73C5 /* catch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = catch.hpp; sourceTree = "<group>"; };
-		A38D1A571AD72A9500EA73C5 /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Circle.cpp; path = test/Circle.cpp; sourceTree = SOURCE_ROOT; };
-		A38D1A581AD72A9500EA73C5 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Circle.h; path = test/Circle.h; sourceTree = SOURCE_ROOT; };
-		A38D1A591AD72A9500EA73C5 /* Polygons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Polygons.cpp; path = test/Polygons.cpp; sourceTree = SOURCE_ROOT; };
-		A38D1A5A1AD72A9500EA73C5 /* Polygons.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; name = Polygons.h; path = test/Polygons.h; sourceTree = SOURCE_ROOT; tabWidth = 4; };
-		A38D1A5B1AD72A9500EA73C5 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shape.cpp; path = test/Shape.cpp; sourceTree = SOURCE_ROOT; };
-		A38D1A5C1AD72A9500EA73C5 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shape.h; path = test/Shape.h; sourceTree = SOURCE_ROOT; };
 		A38D1A631AD7751F00EA73C5 /* Page.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Page.cpp; sourceTree = "<group>"; };
 		A38D1A641AD7751F00EA73C5 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
 		A38D1A661AD7758300EA73C5 /* Postscript.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Postscript.cpp; sourceTree = "<group>"; };
@@ -112,6 +106,12 @@
 		A38D1A841ADB230600EA73C5 /* Spacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spacer.h; sourceTree = "<group>"; };
 		A38D1A871ADB270200EA73C5 /* Rotate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rotate.cpp; sourceTree = "<group>"; };
 		A38D1A881ADB270200EA73C5 /* Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rotate.h; sourceTree = "<group>"; };
+		A3C3A6B11ADF0C3200AE65C6 /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
+		A3C3A6B21ADF0C3200AE65C6 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		A3C3A6B31ADF0C3200AE65C6 /* Polygons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Polygons.cpp; sourceTree = "<group>"; };
+		A3C3A6B41ADF0C3200AE65C6 /* Polygons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Polygons.h; sourceTree = "<group>"; };
+		A3C3A6B51ADF0C3200AE65C6 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
+		A3C3A6B61ADF0C3200AE65C6 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,16 +153,16 @@
 		A38D1A401AD3365200EA73C5 /* CS372-CPS */ = {
 			isa = PBXGroup;
 			children = (
+				A3C3A6B11ADF0C3200AE65C6 /* Circle.cpp */,
+				A3C3A6B21ADF0C3200AE65C6 /* Circle.h */,
+				A3C3A6B31ADF0C3200AE65C6 /* Polygons.cpp */,
+				A3C3A6B41ADF0C3200AE65C6 /* Polygons.h */,
+				A3C3A6B51ADF0C3200AE65C6 /* Shape.cpp */,
+				A3C3A6B61ADF0C3200AE65C6 /* Shape.h */,
 				A38D1A731AD87AE900EA73C5 /* NullPostscript.cpp */,
 				A38D1A741AD87AE900EA73C5 /* NullPostscript.h */,
-				A38D1A571AD72A9500EA73C5 /* Circle.cpp */,
 				A38D1A631AD7751F00EA73C5 /* Page.cpp */,
 				A38D1A641AD7751F00EA73C5 /* Page.h */,
-				A38D1A581AD72A9500EA73C5 /* Circle.h */,
-				A38D1A591AD72A9500EA73C5 /* Polygons.cpp */,
-				A38D1A5A1AD72A9500EA73C5 /* Polygons.h */,
-				A38D1A5B1AD72A9500EA73C5 /* Shape.cpp */,
-				A38D1A5C1AD72A9500EA73C5 /* Shape.h */,
 				A38D1A661AD7758300EA73C5 /* Postscript.cpp */,
 				A38D1A671AD7758300EA73C5 /* Postscript.h */,
 				A38D1A411AD3365200EA73C5 /* main.cpp */,
@@ -284,22 +284,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38D1A5E1AD72A9500EA73C5 /* Polygons.cpp in Sources */,
 				4F9629701ADB53C500912A4F /* Horizontal.cpp in Sources */,
 				4F7608B11ADB2BAF00F7BB42 /* Scaled.cpp in Sources */,
+				A3C3A6B71ADF0C3200AE65C6 /* Circle.cpp in Sources */,
 				A38D1A791ADB184400EA73C5 /* Square.cpp in Sources */,
 				A38D1A751AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */,
 				A38D1A7D1ADB18E100EA73C5 /* Triangle.cpp in Sources */,
 				A38D1A811ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */,
+				A3C3A6B91ADF0C3200AE65C6 /* Shape.cpp in Sources */,
 				A38D1A851ADB230600EA73C5 /* Spacer.cpp in Sources */,
 				4F7608B91ADB455E00F7BB42 /* Vertical.cpp in Sources */,
 				A38D1A421AD3365200EA73C5 /* main.cpp in Sources */,
 				A38D1A681AD7758300EA73C5 /* Postscript.cpp in Sources */,
 				4F7608B51ADB3A0700F7BB42 /* Layered.cpp in Sources */,
 				A38D1A6D1AD7786800EA73C5 /* Path.cpp in Sources */,
-				A38D1A5D1AD72A9500EA73C5 /* Circle.cpp in Sources */,
 				4FDF30BE1ADC734C0094E1AA /* CustomShape.cpp in Sources */,
-				A38D1A5F1AD72A9500EA73C5 /* Shape.cpp in Sources */,
+				A3C3A6B81ADF0C3200AE65C6 /* Polygons.cpp in Sources */,
 				A38D1A891ADB270200EA73C5 /* Rotate.cpp in Sources */,
 				A38D1A651AD7751F00EA73C5 /* Page.cpp in Sources */,
 			);
@@ -318,15 +318,15 @@
 				A38D1A821ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */,
 				A38D1A861ADB230600EA73C5 /* Spacer.cpp in Sources */,
 				4F7608BA1ADB455E00F7BB42 /* Vertical.cpp in Sources */,
-				A38D1A611AD72AA400EA73C5 /* Polygons.cpp in Sources */,
 				A38D1A691AD775D800EA73C5 /* Postscript.cpp in Sources */,
+				A3C3A6BB1ADF0C5B00AE65C6 /* Polygons.cpp in Sources */,
 				4F7608B61ADB3A0700F7BB42 /* Layered.cpp in Sources */,
 				A38D1A6E1AD7786800EA73C5 /* Path.cpp in Sources */,
 				A38D1A4F1AD3376D00EA73C5 /* main.cpp in Sources */,
+				A3C3A6BA1ADF0C5800AE65C6 /* Circle.cpp in Sources */,
 				4FDF30BF1ADC734C0094E1AA /* CustomShape.cpp in Sources */,
-				A38D1A601AD72A9B00EA73C5 /* Circle.cpp in Sources */,
 				A38D1A8A1ADB270200EA73C5 /* Rotate.cpp in Sources */,
-				A38D1A621AD72AA700EA73C5 /* Shape.cpp in Sources */,
+				A3C3A6BC1ADF0C5F00AE65C6 /* Shape.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
