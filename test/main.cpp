@@ -302,6 +302,7 @@ TEST_CASE( "Postscript", "[postcript]")
         string testString = "-0.5 -1 moveto\n1 0 rlineto\n0 2 rlineto\n-1 0 rlineto\nclosepath\nstroke\n";
         REQUIRE(rectangle->buildPS() == testString);
     }
+	
     SECTION("Spacer Postscript")
     {
         shared_ptr<Shape> spacer = make_shared<Spacer>(1, 2);

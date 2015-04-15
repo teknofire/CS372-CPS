@@ -9,22 +9,19 @@
 #ifndef __CS372_CPS__CustomShape__
 #define __CS372_CPS__CustomShape__
 #include "Shape.h"
+#include "Layered.h"
+#include <memory>
+#include <vector>
 
-class CustomShape : public Shape {
+class CustomShape : public Postscript {
 public:
     
     CustomShape();
     
-    virtual double getBoundingBoxHeight() override;
-    virtual double getBoundingBoxWidth() override;
-    virtual double getCurrentPositionX() override;
-    virtual double getCurrentPositionY() override;
-    
     virtual const string buildPS() override;
     
 private:
-    
-    
+    std::vector<shared_ptr<Shape>> _shapes;
     
 };
 #endif /* defined(__CS372_CPS__CustomShape__) */

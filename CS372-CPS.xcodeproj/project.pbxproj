@@ -75,12 +75,6 @@
 		4F7608B81ADB455E00F7BB42 /* Vertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertical.h; sourceTree = "<group>"; };
 		4F96296E1ADB53C500912A4F /* Horizontal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Horizontal.cpp; sourceTree = "<group>"; };
 		4F96296F1ADB53C500912A4F /* Horizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Horizontal.h; sourceTree = "<group>"; };
-		4FDAA2A41AD72EF20016FD24 /* Polygons.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Polygons.cpp; sourceTree = "<group>"; };
-		4FDAA2A51AD72EF20016FD24 /* Polygons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Polygons.h; sourceTree = "<group>"; };
-		4FDAA2A61AD72EF20016FD24 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
-		4FDAA2A71AD72EF20016FD24 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
-		4FDAA2AA1AD72EFB0016FD24 /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
-		4FDAA2AB1AD72EFB0016FD24 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
 		4FDF30BC1ADC734C0094E1AA /* CustomShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomShape.cpp; sourceTree = "<group>"; };
 		4FDF30BD1ADC734C0094E1AA /* CustomShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomShape.h; sourceTree = "<group>"; };
 		A38D1A3E1AD3365200EA73C5 /* CS372-CPS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CS372-CPS"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,12 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				A38D1A4E1AD3376D00EA73C5 /* main.cpp */,
-				4FDAA2A41AD72EF20016FD24 /* Polygons.cpp */,
-				4FDAA2A51AD72EF20016FD24 /* Polygons.h */,
-				4FDAA2A61AD72EF20016FD24 /* Shape.cpp */,
-				4FDAA2AA1AD72EFB0016FD24 /* Circle.cpp */,
-				4FDAA2AB1AD72EFB0016FD24 /* Circle.h */,
-				4FDAA2A71AD72EF20016FD24 /* Shape.h */,
 				A38D1A531AD3381900EA73C5 /* catch.hpp */,
 			);
 			path = test;

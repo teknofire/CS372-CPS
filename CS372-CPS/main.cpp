@@ -21,6 +21,7 @@
 #include "Vertical.h"
 #include "Horizontal.h"
 #include "Spacer.h"
+#include "CustomShape.h"
 #include <memory>
 #include <initializer_list>
 
@@ -90,7 +91,11 @@ int main() {
     fp << horizontal->buildPS();
     fp << "showpage\n";
     
+    CustomShape ourshape;
     
+    fp << "200 200 translate\n";
+    fp << ourshape.buildPS();
+    fp << "showpage\n";
 //    page.createPS(fp);
     
     fp.close();
