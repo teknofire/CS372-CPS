@@ -22,7 +22,9 @@ double Circle::getCurrentPositionY()
 const string Circle::buildPS()  {
     std::stringstream ps;
 
-    ps << "0 0 " << _radius << " 0 360 arc\nstroke\n";
+    ps << "0 0 " << _radius << " 0 360 arc\n";
+    ps << Shape::getDrawShape()->buildPS();
+    
     return ps.str();
     
 }

@@ -61,8 +61,6 @@ int main() {
     shared_ptr<Vertical> vert2 = make_shared<Vertical>(std::vector<shared_ptr<Shape>>{triangle, spacer, circle});
     
     
-//    Page page(path1);
-    
     auto moveToCenter = "306 396 translate\n";
     
     std::fstream fp("output.ps", std::fstream::out);
@@ -105,7 +103,6 @@ int main() {
     
     custom_fp.close();
     
-    
-    
+
     return 0;
 }

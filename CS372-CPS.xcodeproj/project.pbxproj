@@ -43,6 +43,8 @@
 		A3C3A6BA1ADF0C5800AE65C6 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6B11ADF0C3200AE65C6 /* Circle.cpp */; };
 		A3C3A6BB1ADF0C5B00AE65C6 /* Polygons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6B31ADF0C3200AE65C6 /* Polygons.cpp */; };
 		A3C3A6BC1ADF0C5F00AE65C6 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6B51ADF0C3200AE65C6 /* Shape.cpp */; };
+		A3C3A6BF1AE0A75600AE65C6 /* DrawShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6BD1AE0A75600AE65C6 /* DrawShape.cpp */; };
+		A3C3A6C01AE0A75600AE65C6 /* DrawShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6BD1AE0A75600AE65C6 /* DrawShape.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -106,6 +108,8 @@
 		A3C3A6B41ADF0C3200AE65C6 /* Polygons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Polygons.h; sourceTree = "<group>"; };
 		A3C3A6B51ADF0C3200AE65C6 /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
 		A3C3A6B61ADF0C3200AE65C6 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		A3C3A6BD1AE0A75600AE65C6 /* DrawShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawShape.cpp; sourceTree = "<group>"; };
+		A3C3A6BE1AE0A75600AE65C6 /* DrawShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawShape.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 				4F7608B01ADB2BAF00F7BB42 /* Scaled.h */,
 				A3C3A6B51ADF0C3200AE65C6 /* Shape.cpp */,
 				A3C3A6B61ADF0C3200AE65C6 /* Shape.h */,
+				A3C3A6BD1AE0A75600AE65C6 /* DrawShape.cpp */,
+				A3C3A6BE1AE0A75600AE65C6 /* DrawShape.h */,
 				A38D1A831ADB230600EA73C5 /* Spacer.cpp */,
 				A38D1A841ADB230600EA73C5 /* Spacer.h */,
 				A38D1A771ADB184400EA73C5 /* Square.cpp */,
@@ -278,6 +284,7 @@
 				A38D1A791ADB184400EA73C5 /* Square.cpp in Sources */,
 				A38D1A751AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */,
 				A38D1A7D1ADB18E100EA73C5 /* Triangle.cpp in Sources */,
+				A3C3A6BF1AE0A75600AE65C6 /* DrawShape.cpp in Sources */,
 				A38D1A811ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */,
 				A3C3A6B91ADF0C3200AE65C6 /* Shape.cpp in Sources */,
 				A38D1A851ADB230600EA73C5 /* Spacer.cpp in Sources */,
@@ -303,6 +310,7 @@
 				A38D1A7A1ADB184400EA73C5 /* Square.cpp in Sources */,
 				A38D1A761AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */,
 				A38D1A7E1ADB18E100EA73C5 /* Triangle.cpp in Sources */,
+				A3C3A6C01AE0A75600AE65C6 /* DrawShape.cpp in Sources */,
 				A38D1A821ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */,
 				A38D1A861ADB230600EA73C5 /* Spacer.cpp in Sources */,
 				4F7608BA1ADB455E00F7BB42 /* Vertical.cpp in Sources */,

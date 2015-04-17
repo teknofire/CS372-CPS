@@ -22,6 +22,7 @@
 #include "Layered.h"
 #include "Vertical.h"
 #include "Horizontal.h"
+#include "DrawShape.h"
 
 #include <iostream>
 #include <memory>
@@ -39,6 +40,40 @@ bool AreSame(double a, double b) {
 //Test the results from each method to determine if the shape will be built rights
 //Test the output stream for proper format
 //Visual Inspection of resulting file.ps
+
+TEST_CASE( "Drawing Shapes with Color" )
+{
+	DrawShape ds;
+	SECTION( "Default values" )
+	{
+		REQUIRE(ds.buildPS() == "0 0 0 getrgbcolor\nstroke\n");
+	}
+	
+	SECTION( "RED values" )
+	{
+		ds.setColor(255, 0, 0);
+		REQUIRE(ds.buildPS() == "1 0 0 getrgbcolor\nstroke\n");
+	}
+	
+	SECTION( "Blue values" )
+	{
+		ds.setColor(0, 0, 255);
+		REQUIRE(ds.buildPS() == "0 0 1 getrgbcolor\nstroke\n");
+	}
+	
+	SECTION( "Green values" )
+	{
+		ds.setColor(0, 255, 0);
+		REQUIRE(ds.buildPS() == "0 1 0 getrgbcolor\nstroke\n");
+	}
+	
+	SECTION( "Fill type" )
+	{
+		ds.setDrawType("fill");
+		REQUIRE(ds.buildPS() == "0 0 0 getrgbcolor\nfill\n");
+	}
+}
+
 TEST_CASE( "Shapes", "[shape]")
 {
 	
@@ -57,7 +92,7 @@ TEST_CASE( "Shapes", "[shape]")
         
         shared_ptr<Layered> layer = make_shared<Layered>(std::vector<shared_ptr<Shape>> {circle, square, triangle});
         
-        REQUIRE(layer->buildPS() == circlePath->buildPS() + squarePath->buildPS() + trianglePath->buildPS());
+        REQUIRE(layer->buildPS() == "gsave\n" + circlePath->buildPS() + squarePath->buildPS() + trianglePath->buildPS() + "grestore\n");
         REQUIRE(layer->getBoundingBoxHeight() == 20);
         REQUIRE(layer->getBoundingBoxWidth() == 20);
         REQUIRE(layer->getCurrentPositionX() == 10);
@@ -108,7 +143,7 @@ TEST_CASE( "Shapes", "[shape]")
         {
          
             string contentString = "";
-            contentString = "0 0 10 0 360 arc\nstroke\n";
+            contentString = "0 0 10 0 360 arc\n0 0 0 getrgbcolor\nstroke\n";
             
             REQUIRE(circle->buildPS() == contentString);
         }
@@ -191,7 +226,7 @@ TEST_CASE( "Shapes", "[shape]")
         {
             shared_ptr<Shape> rotated = make_shared<Rotate>(pentagon, 90);
             
-            REQUIRE(rotated->buildPS() == "90 rotate\n" + pentagon->buildPS());
+            REQUIRE(rotated->buildPS() == "gsave\n90 rotate\n" + pentagon->buildPS() + "grestore\n");
             REQUIRE(AreSame(rotated->getBoundingBoxHeight(), 1.61803));
             REQUIRE(AreSame(rotated->getBoundingBoxWidth(), 1.53884));
             REQUIRE(AreSame(rotated->getCurrentPositionX(), 1.53884/2.0));
@@ -202,7 +237,7 @@ TEST_CASE( "Shapes", "[shape]")
         {
             shared_ptr<Shape> rotated3 = make_shared<Rotate>(pentagon, 270);
             
-            REQUIRE(rotated3->buildPS() == "270 rotate\n" + pentagon->buildPS());
+            REQUIRE(rotated3->buildPS() == "gsave\n270 rotate\n" + pentagon->buildPS() + "grestore\n");
             REQUIRE(AreSame(rotated3->getBoundingBoxHeight(), 1.61803));
             REQUIRE(AreSame(rotated3->getBoundingBoxWidth(), 1.53884));
             REQUIRE(AreSame(rotated3->getCurrentPositionX(), 1.53884/2.0));
@@ -213,7 +248,7 @@ TEST_CASE( "Shapes", "[shape]")
         {
             shared_ptr<Shape> rotated2 = make_shared<Rotate>(pentagon, 180);
             
-            REQUIRE(rotated2->buildPS() == "180 rotate\n" + pentagon->buildPS());
+            REQUIRE(rotated2->buildPS() == "gsave\n180 rotate\n" + pentagon->buildPS() + "grestore\n");
             REQUIRE(AreSame(rotated2->getBoundingBoxHeight(), 1.53884));
             REQUIRE(AreSame(rotated2->getBoundingBoxWidth(), 1.61803));
             REQUIRE(AreSame(rotated2->getCurrentPositionX(), 1.61803/2.0));

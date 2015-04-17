@@ -54,6 +54,7 @@ const string Layered::buildPS(){
     
     std::stringstream buff;
     
+    
     for (auto shape : _shapes){
         
         Path newPath(shape);
@@ -62,6 +63,6 @@ const string Layered::buildPS(){
     
     }
     
-    return buff.str();
+    return "gsave\n" + buff.str() + "grestore\n";
     
 }
