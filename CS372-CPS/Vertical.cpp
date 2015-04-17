@@ -9,6 +9,11 @@
 #include "Vertical.h"
 #include "Path.h"
 
+void Vertical::push_back(shared_ptr<Shape> shape)
+{
+    _shapes.push_back(shape);
+}
+
 double Vertical::getBoundingBoxHeight(){
     
     double maxHeight = 0.0;
@@ -55,6 +60,7 @@ const string Vertical::buildPS(){
     
     auto index = _shapes.begin();
     
+    buff << "gsave\n";
     buff << Path(*index).buildPS();
     buff << "0 " << (*index)->getCurrentPositionY() << " translate\n";
     
@@ -66,6 +72,7 @@ const string Vertical::buildPS(){
         buff << "0 " << (*index)->getCurrentPositionY() << " translate\n";
        
     }
+    buff << "grestore\n";
     
     return buff.str();
     

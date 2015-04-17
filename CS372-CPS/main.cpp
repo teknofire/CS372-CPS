@@ -91,7 +91,7 @@ int main() {
     fp << horizontal->buildPS();
     fp << "showpage\n";
     
-    CustomShape ourshape;
+    CustomShape ourshape(20, 10);
     
     fp << "200 200 translate\n";
     fp << ourshape.buildPS();

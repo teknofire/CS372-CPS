@@ -29,6 +29,8 @@ public:
     
     virtual const string buildPS() override;
     
+    void push_back(shared_ptr<Shape>);
+    
 private:
     vector<shared_ptr<Shape>> _shapes;
     

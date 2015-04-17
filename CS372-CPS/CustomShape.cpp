@@ -15,12 +15,15 @@
 #include "Path.h"
 #include "Spacer.h"
 #include "Vertical.h"
+#include "Rotate.h"
 
 #include <iostream>
 #include <sstream>
 #include <initializer_list>
 #include <memory>
 #include <vector>
+#include <random>
+
 using std::make_shared;
 
 //double getBoundingBoxHeight() {
@@ -44,20 +47,38 @@ using std::make_shared;
 //    
 //}
 
-CustomShape::CustomShape():_shapes({})
+CustomShape::CustomShape(int firstOrbit, int numberPlanets):_shapes({})
 {
-    shared_ptr<Shape> planet = make_shared<Circle>(10);
-    shared_ptr<Shape> spacer1 = make_shared<Spacer>(140, 140);
-    shared_ptr<Shape> spacer2 = make_shared<Spacer>(20, 20);
-    shared_ptr<Shape> circle = make_shared<Circle>(80);
-    shared_ptr<Shape> circle2 = make_shared<Circle>(120);
-    shared_ptr<Shape> circle3 = make_shared<Circle>(160);
-    shared_ptr<Shape> orbits = make_shared<Layered>(std::initializer_list<shared_ptr<Shape>>({ circle3, circle2, circle}));
+    auto otherOrbit = firstOrbit / 2;
+    auto planetSize = otherOrbit / 2;
     
-    shared_ptr<Shape> planet1 = make_shared<Vertical>(std::initializer_list<shared_ptr<Shape>>({ spacer1, planet, spacer2, planet, spacer2, planet }));
+    shared_ptr<Shape> planet = make_shared<Circle>(planetSize);
+    shared_ptr<Shape> spacer1 = make_shared<Spacer>(firstOrbit*2 - planetSize*2, firstOrbit*2 - planetSize*2);
+    shared_ptr<Shape> spacer2 = make_shared<Spacer>(otherOrbit, otherOrbit);
     
-    _shapes.push_back(orbits);
-    _shapes.push_back(planet1);
+    std::mt19937::result_type seed = time(0);
+    auto orientation = std::bind(std::uniform_int_distribution<int>(0,360),
+                                 std::mt19937(seed));
+    
+//    std::mt19937 generator(time(0));
+//    std::uniform_int_distribution<int> distribution(0,360);
+//    auto orientation = std::bind ( distribution, generator );
+    
+    for(auto ii=0; ii<numberPlanets; ++ii)
+    {
+        shared_ptr<Shape> orbit = make_shared<Circle>(firstOrbit + (ii*otherOrbit));
+        _shapes.push_back(orbit);
+        
+        shared_ptr<Vertical> aPlanet = make_shared<Vertical>(std::initializer_list<shared_ptr<Shape>>({ spacer1 }));
+        
+        for(auto jj=0; jj<=ii-1; ++jj)
+            aPlanet->push_back(spacer2);
+        
+        aPlanet->push_back(planet);
+        shared_ptr<Rotate> rotated = make_shared<Rotate>(aPlanet, orientation());
+        
+        _shapes.push_back(rotated);
+    }
 }
 
 const string CustomShape::buildPS() {

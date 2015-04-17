@@ -11,8 +11,10 @@
 const string Rotate::buildPS()
 {
     std::stringstream buff;
+    buff << "gsave\n";
     buff << _angle << " rotate\n";
     buff << _shape->buildPS();
+    buff << "grestore\n";
     
     return buff.str();
 }

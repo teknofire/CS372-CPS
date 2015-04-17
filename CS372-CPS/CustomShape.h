@@ -16,7 +16,7 @@
 class CustomShape : public Postscript {
 public:
     
-    CustomShape();
+    CustomShape(int, int);
     
     virtual const string buildPS() override;
     
