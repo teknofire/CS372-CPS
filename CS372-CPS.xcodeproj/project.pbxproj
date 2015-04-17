@@ -33,8 +33,6 @@
 		A38D1A7E1ADB18E100EA73C5 /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A7B1ADB18E100EA73C5 /* Triangle.cpp */; };
 		A38D1A811ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A7F1ADB1A1F00EA73C5 /* Rectangle.cpp */; };
 		A38D1A821ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A7F1ADB1A1F00EA73C5 /* Rectangle.cpp */; };
-		A38D1A851ADB230600EA73C5 /* Spacer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A831ADB230600EA73C5 /* Spacer.cpp */; };
-		A38D1A861ADB230600EA73C5 /* Spacer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A831ADB230600EA73C5 /* Spacer.cpp */; };
 		A38D1A891ADB270200EA73C5 /* Rotate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A871ADB270200EA73C5 /* Rotate.cpp */; };
 		A38D1A8A1ADB270200EA73C5 /* Rotate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A871ADB270200EA73C5 /* Rotate.cpp */; };
 		A3C3A6B71ADF0C3200AE65C6 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C3A6B11ADF0C3200AE65C6 /* Circle.cpp */; };
@@ -98,7 +96,6 @@
 		A38D1A7C1ADB18E100EA73C5 /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
 		A38D1A7F1ADB1A1F00EA73C5 /* Rectangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rectangle.cpp; sourceTree = "<group>"; };
 		A38D1A801ADB1A1F00EA73C5 /* Rectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
-		A38D1A831ADB230600EA73C5 /* Spacer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Spacer.cpp; sourceTree = "<group>"; };
 		A38D1A841ADB230600EA73C5 /* Spacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spacer.h; sourceTree = "<group>"; };
 		A38D1A871ADB270200EA73C5 /* Rotate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rotate.cpp; sourceTree = "<group>"; };
 		A38D1A881ADB270200EA73C5 /* Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rotate.h; sourceTree = "<group>"; };
@@ -180,7 +177,6 @@
 				A3C3A6B61ADF0C3200AE65C6 /* Shape.h */,
 				A3C3A6BD1AE0A75600AE65C6 /* DrawShape.cpp */,
 				A3C3A6BE1AE0A75600AE65C6 /* DrawShape.h */,
-				A38D1A831ADB230600EA73C5 /* Spacer.cpp */,
 				A38D1A841ADB230600EA73C5 /* Spacer.h */,
 				A38D1A771ADB184400EA73C5 /* Square.cpp */,
 				A38D1A781ADB184400EA73C5 /* Square.h */,
@@ -287,7 +283,6 @@
 				A3C3A6BF1AE0A75600AE65C6 /* DrawShape.cpp in Sources */,
 				A38D1A811ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */,
 				A3C3A6B91ADF0C3200AE65C6 /* Shape.cpp in Sources */,
-				A38D1A851ADB230600EA73C5 /* Spacer.cpp in Sources */,
 				4F7608B91ADB455E00F7BB42 /* Vertical.cpp in Sources */,
 				A38D1A421AD3365200EA73C5 /* main.cpp in Sources */,
 				A38D1A681AD7758300EA73C5 /* Postscript.cpp in Sources */,
@@ -312,7 +307,6 @@
 				A38D1A7E1ADB18E100EA73C5 /* Triangle.cpp in Sources */,
 				A3C3A6C01AE0A75600AE65C6 /* DrawShape.cpp in Sources */,
 				A38D1A821ADB1A1F00EA73C5 /* Rectangle.cpp in Sources */,
-				A38D1A861ADB230600EA73C5 /* Spacer.cpp in Sources */,
 				4F7608BA1ADB455E00F7BB42 /* Vertical.cpp in Sources */,
 				A38D1A691AD775D800EA73C5 /* Postscript.cpp in Sources */,
 				A3C3A6BB1ADF0C5B00AE65C6 /* Polygons.cpp in Sources */,
