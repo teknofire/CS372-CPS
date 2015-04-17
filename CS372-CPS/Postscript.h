@@ -17,7 +17,6 @@ class Postscript
 public:
     virtual ~Postscript() = default;
     virtual const string buildPS() = 0;
-    
 private:
     
 };

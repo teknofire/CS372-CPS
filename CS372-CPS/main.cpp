@@ -63,8 +63,10 @@ int main() {
     
 //    Page page(path1);
     
+    auto moveToCenter = "306 396 translate\n";
+    
     std::fstream fp("output.ps", std::fstream::out);
-    fp << "200 200 translate\n";
+    fp << moveToCenter;
     fp << pentagonPath->buildPS();
     fp << circlePath->buildPS();
     fp << boundsPath->buildPS();
@@ -75,30 +77,33 @@ int main() {
     fp << scaledTrianglePath->buildPS();
     fp << "showpage\n";
     
-    fp << "200 200 translate\n";
+    fp << moveToCenter;
     fp << layer->buildPS();
     fp << "showpage\n";
     
-    fp << "200 200 translate\n";
+    fp << moveToCenter;
     fp << vert->buildPS();
     fp << "showpage\n";
     
-    fp << "200 200 translate\n";
+    fp << moveToCenter;
     fp << vert2->buildPS();
     fp << "showpage\n";
     
-    fp << "200 200 translate\n";
+    fp << moveToCenter;
     fp << horizontal->buildPS();
     fp << "showpage\n";
     
+    fp.close();
+    
+    std::fstream custom_fp("solar_system.ps", std::fstream::out);
+
     CustomShape ourshape(20, 10);
     
-    fp << "200 200 translate\n";
-    fp << ourshape.buildPS();
-    fp << "showpage\n";
-//    page.createPS(fp);
+    custom_fp << moveToCenter;
+    custom_fp << ourshape.buildPS();
+    custom_fp << "showpage\n";
     
-    fp.close();
+    custom_fp.close();
     
     
     
