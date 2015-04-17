@@ -1,5 +1,5 @@
 UAF CS 372
-Project 2 - Postscript
+Project 2 CPS - C++ to Postscript
 
 Contributors:
 Will Fisher
