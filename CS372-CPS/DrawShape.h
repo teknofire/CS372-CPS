@@ -20,6 +20,8 @@ public:
     
     void setColor(double red, double green, double blue);
     void setRandomColor();
+    void enableRandomColor();
+    void disableRandomColor();
     void setDrawType(std::string);
     
     std::string buildPS();
@@ -27,6 +29,12 @@ public:
 private:
     std::string _drawType = "stroke";
     std::string _drawColor = "0 0 0";
+    bool _enableRandomColor = false;
+    
+    typedef std::minstd_rand                                Engine;
+    typedef std::uniform_real_distribution<double>          Distribution;
+    
+    std::function<double()> _genColor = std::bind(Distribution(0, 255), Engine((std::minstd_rand::result_type)time(NULL)));
 };
 
 #endif /* defined(__CS372_CPS__DrawShape__) */

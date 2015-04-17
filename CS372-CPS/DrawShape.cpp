@@ -9,6 +9,7 @@
 #include "DrawShape.h"
 #include <sstream>
 #include <random>
+#include <iostream>
 
 void DrawShape::setColor(double red, double green, double blue)
 {
@@ -20,6 +21,15 @@ void DrawShape::setColor(double red, double green, double blue)
     _drawColor = buffer.str();
 }
 
+void DrawShape::enableRandomColor()
+{
+    _enableRandomColor = true;
+}
+void DrawShape::disableRandomColor()
+{
+    _enableRandomColor = false;
+}
+
 void DrawShape::setDrawType(std::string type)
 {
     _drawType = type;
@@ -27,14 +37,15 @@ void DrawShape::setDrawType(std::string type)
 
 void DrawShape::setRandomColor()
 {
-    std::mt19937::result_type seed = std::mt19937::result_type(time(0));
-    auto rand_color = std::bind(std::uniform_int_distribution<int>(0,255),
-                                 std::mt19937(seed));
-    setColor(rand_color(), rand_color(), rand_color());
+    if (_enableRandomColor)
+    {
+        setColor(_genColor(), _genColor(), _genColor());
+    }
 }
 
 std::string DrawShape::buildPS()
 {
+    setRandomColor();
     return _drawColor + " setrgbcolor\n" + _drawType + "\n";
 }
 

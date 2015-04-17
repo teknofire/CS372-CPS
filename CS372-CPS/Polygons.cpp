@@ -58,7 +58,8 @@ const string Polygons::buildPS() {
         buff << angle << " rotate\n";
         buff << _sideLength << " 0 rlineto\n";
     }
-    buff << "closepath\nstroke\n";
+    buff << "closepath\n";
+    buff << Shape::getDrawShape()->buildPS();
     
     return buff.str();
     

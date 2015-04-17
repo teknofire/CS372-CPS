@@ -39,6 +39,8 @@ const string Rectangle::buildPS()
     buff << _widthLength << " 0 rlineto\n";
     buff << "0 " << _heightLength << " rlineto\n";
     buff << -_widthLength << " 0 rlineto\n";
-    buff << "closepath\nstroke\n";
+    buff << "closepath\n";
+    buff << Shape::getDrawShape()->buildPS();
+    
     return buff.str();
 }

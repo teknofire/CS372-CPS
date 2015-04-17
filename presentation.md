@@ -2,7 +2,7 @@
 
 ## Dylan Tucker, Jacob McKenna, Will Fisher, Adam Walters
 
-![](output_pdf__page_6_of_6_.png)
+![](solar_system_pdf__1_page_.png)
 
 ### April 17th, 2015
 
@@ -35,7 +35,7 @@
   CustomShape solar_system(20, 10);
 ```
 
-![inline](/Users/wfisher/Desktop/output_pdf__page_6_of_6_.png)
+![inline](solar_system_pdf__1_page_.png)
 
 ---
 

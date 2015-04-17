@@ -46,31 +46,31 @@ TEST_CASE( "Drawing Shapes with Color" )
 	DrawShape ds;
 	SECTION( "Default values" )
 	{
-		REQUIRE(ds.buildPS() == "0 0 0 getrgbcolor\nstroke\n");
+		REQUIRE(ds.buildPS() == "0 0 0 setrgbcolor\nstroke\n");
 	}
 	
 	SECTION( "RED values" )
 	{
 		ds.setColor(255, 0, 0);
-		REQUIRE(ds.buildPS() == "1 0 0 getrgbcolor\nstroke\n");
+		REQUIRE(ds.buildPS() == "1 0 0 setrgbcolor\nstroke\n");
 	}
 	
 	SECTION( "Blue values" )
 	{
 		ds.setColor(0, 0, 255);
-		REQUIRE(ds.buildPS() == "0 0 1 getrgbcolor\nstroke\n");
+		REQUIRE(ds.buildPS() == "0 0 1 setrgbcolor\nstroke\n");
 	}
 	
 	SECTION( "Green values" )
 	{
 		ds.setColor(0, 255, 0);
-		REQUIRE(ds.buildPS() == "0 1 0 getrgbcolor\nstroke\n");
+		REQUIRE(ds.buildPS() == "0 1 0 setrgbcolor\nstroke\n");
 	}
 	
 	SECTION( "Fill type" )
 	{
 		ds.setDrawType("fill");
-		REQUIRE(ds.buildPS() == "0 0 0 getrgbcolor\nfill\n");
+		REQUIRE(ds.buildPS() == "0 0 0 setrgbcolor\nfill\n");
 	}
 }
 
@@ -143,7 +143,7 @@ TEST_CASE( "Shapes", "[shape]")
         {
          
             string contentString = "";
-            contentString = "0 0 10 0 360 arc\n0 0 0 getrgbcolor\nstroke\n";
+            contentString = "0 0 10 0 360 arc\n0 0 0 setrgbcolor\nstroke\n";
             
             REQUIRE(circle->buildPS() == contentString);
         }
@@ -166,7 +166,7 @@ TEST_CASE( "Shapes", "[shape]")
         
         SECTION( "render square" )
         {
-            REQUIRE(square->buildPS() == "-0.5 -0.5 moveto\n1 0 rlineto\n90 rotate\n1 0 rlineto\n90 rotate\n1 0 rlineto\nclosepath\nstroke\n");
+            REQUIRE(square->buildPS() == "-0.5 -0.5 moveto\n1 0 rlineto\n90 rotate\n1 0 rlineto\n90 rotate\n1 0 rlineto\nclosepath\n0 0 0 setrgbcolor\nstroke\n");
         }
         
     }
@@ -334,7 +334,7 @@ TEST_CASE( "Postscript", "[postcript]")
     SECTION("Rectangle Postscript")
     {
         shared_ptr<Shape> rectangle = make_shared<Rectangle>(1, 2);
-        string testString = "-0.5 -1 moveto\n1 0 rlineto\n0 2 rlineto\n-1 0 rlineto\nclosepath\nstroke\n";
+        string testString = "-0.5 -1 moveto\n1 0 rlineto\n0 2 rlineto\n-1 0 rlineto\nclosepath\n0 0 0 setrgbcolor\nstroke\n";
         REQUIRE(rectangle->buildPS() == testString);
     }
 	

@@ -54,6 +54,7 @@ CustomShape::CustomShape(int firstOrbit, int numberPlanets):_shapes({})
     
     shared_ptr<Shape> planet = make_shared<Circle>(planetSize);
     planet->getDrawShape()->setDrawType("fill");
+    planet->getDrawShape()->enableRandomColor();
     
     shared_ptr<Shape> spacer1 = make_shared<Spacer>(firstOrbit*2 - planetSize*2, firstOrbit*2 - planetSize*2);
     shared_ptr<Shape> spacer2 = make_shared<Spacer>(otherOrbit, otherOrbit);
@@ -76,7 +77,6 @@ CustomShape::CustomShape(int firstOrbit, int numberPlanets):_shapes({})
         for(auto jj=0; jj<=ii-1; ++jj)
             aPlanet->push_back(spacer2);
         
-        planet->getDrawShape()->setRandomColor();
         aPlanet->push_back(planet);
         shared_ptr<Rotate> rotated = make_shared<Rotate>(aPlanet, orientation());
         
