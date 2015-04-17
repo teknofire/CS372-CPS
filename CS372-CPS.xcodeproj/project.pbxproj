@@ -13,14 +13,14 @@
 		4F7608B61ADB3A0700F7BB42 /* Layered.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608B31ADB3A0700F7BB42 /* Layered.cpp */; };
 		4F7608B91ADB455E00F7BB42 /* Vertical.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608B71ADB455E00F7BB42 /* Vertical.cpp */; };
 		4F7608BA1ADB455E00F7BB42 /* Vertical.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7608B71ADB455E00F7BB42 /* Vertical.cpp */; };
+		4F7E42FB1AE1A8F400026105 /* Page.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A631AD7751F00EA73C5 /* Page.cpp */; };
+		4F7E42FC1AE1A8F500026105 /* Page.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A631AD7751F00EA73C5 /* Page.cpp */; };
 		4F9629701ADB53C500912A4F /* Horizontal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F96296E1ADB53C500912A4F /* Horizontal.cpp */; };
 		4F9629711ADB53CB00912A4F /* Horizontal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F96296E1ADB53C500912A4F /* Horizontal.cpp */; };
 		4FDF30BE1ADC734C0094E1AA /* CustomShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF30BC1ADC734C0094E1AA /* CustomShape.cpp */; };
 		4FDF30BF1ADC734C0094E1AA /* CustomShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF30BC1ADC734C0094E1AA /* CustomShape.cpp */; };
 		A38D1A421AD3365200EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A411AD3365200EA73C5 /* main.cpp */; };
 		A38D1A4F1AD3376D00EA73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A4E1AD3376D00EA73C5 /* main.cpp */; };
-		A38D1A651AD7751F00EA73C5 /* Page.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A631AD7751F00EA73C5 /* Page.cpp */; };
-		A38D1A6A1AD7781700EA73C5 /* Page.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A631AD7751F00EA73C5 /* Page.cpp */; };
 		A38D1A6D1AD7786800EA73C5 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A6B1AD7786800EA73C5 /* Path.cpp */; };
 		A38D1A6E1AD7786800EA73C5 /* Path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A6B1AD7786800EA73C5 /* Path.cpp */; };
 		A38D1A751AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A38D1A731AD87AE900EA73C5 /* NullPostscript.cpp */; };
@@ -69,6 +69,7 @@
 		4F7608B81ADB455E00F7BB42 /* Vertical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertical.h; sourceTree = "<group>"; };
 		4F96296E1ADB53C500912A4F /* Horizontal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Horizontal.cpp; sourceTree = "<group>"; };
 		4F96296F1ADB53C500912A4F /* Horizontal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Horizontal.h; sourceTree = "<group>"; };
+		4F9AD2041AE1C00A00FDE654 /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		4FDF30BC1ADC734C0094E1AA /* CustomShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomShape.cpp; sourceTree = "<group>"; };
 		4FDF30BD1ADC734C0094E1AA /* CustomShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomShape.h; sourceTree = "<group>"; };
 		A38D1A3E1AD3365200EA73C5 /* CS372-CPS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CS372-CPS"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +122,7 @@
 		A38D1A351AD3365100EA73C5 = {
 			isa = PBXGroup;
 			children = (
+				4F9AD2041AE1C00A00FDE654 /* readme.txt */,
 				A38D1A401AD3365200EA73C5 /* CS372-CPS */,
 				A38D1A4D1AD3376D00EA73C5 /* test */,
 				A38D1A3F1AD3365200EA73C5 /* Products */,
@@ -271,12 +273,12 @@
 				A3C3A6B91ADF0C3200AE65C6 /* Shape.cpp in Sources */,
 				4F7608B91ADB455E00F7BB42 /* Vertical.cpp in Sources */,
 				A38D1A421AD3365200EA73C5 /* main.cpp in Sources */,
+				4F7E42FC1AE1A8F500026105 /* Page.cpp in Sources */,
 				4F7608B51ADB3A0700F7BB42 /* Layered.cpp in Sources */,
 				A38D1A6D1AD7786800EA73C5 /* Path.cpp in Sources */,
 				4FDF30BE1ADC734C0094E1AA /* CustomShape.cpp in Sources */,
 				A3C3A6B81ADF0C3200AE65C6 /* Polygons.cpp in Sources */,
 				A38D1A891ADB270200EA73C5 /* Rotate.cpp in Sources */,
-				A38D1A651AD7751F00EA73C5 /* Page.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38D1A6A1AD7781700EA73C5 /* Page.cpp in Sources */,
 				4F9629711ADB53CB00912A4F /* Horizontal.cpp in Sources */,
 				4F7608B21ADB363D00F7BB42 /* Scaled.cpp in Sources */,
 				A38D1A761AD87AEA00EA73C5 /* NullPostscript.cpp in Sources */,
@@ -294,6 +295,7 @@
 				A3C3A6BB1ADF0C5B00AE65C6 /* Polygons.cpp in Sources */,
 				4F7608B61ADB3A0700F7BB42 /* Layered.cpp in Sources */,
 				A38D1A6E1AD7786800EA73C5 /* Path.cpp in Sources */,
+				4F7E42FB1AE1A8F400026105 /* Page.cpp in Sources */,
 				A38D1A4F1AD3376D00EA73C5 /* main.cpp in Sources */,
 				A3C3A6BA1ADF0C5800AE65C6 /* Circle.cpp in Sources */,
 				4FDF30BF1ADC734C0094E1AA /* CustomShape.cpp in Sources */,
